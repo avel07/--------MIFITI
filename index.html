@@ -26,7 +26,7 @@
                         </a>
                     </div>
                 </div>
-                <nav>
+                <nav class="header__menu">
                     <ul class="header__menu__items">
                         <li class="header__menu__item">
                             <a href="#">Каталог</a>
@@ -95,6 +95,83 @@
                             <a href="#">О нас</a>
                         </li>
                     </ul>
+                </nav>
+                <nav class="header__menu--mob">
+                    <div class="header__menu--mob__head">
+                        <div class="header__menu--mob__title">
+                            <span>Меню</span>
+                        </div>
+                        <div class="header__menu--mob__close">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 23.9993L24 1" stroke="#1D1D1D" stroke-linecap="round"/>
+                                <path d="M1 1.0007L24 24" stroke="#1D1D1D" stroke-linecap="round"/>
+                                </svg>
+                        </div>
+                    </div>
+                    <div class="header__menu--mob__body">
+                        <ul class="header__menu--mob__items">
+                            <li class="header__menu--mob__item">
+                                <div class="header__menu--mob__item--link">
+                                <a href="#">Каталог</a>
+                                </div>
+                                <div class="header__menu--mob__toggle" data-toggle="collapse" data-target=".catalog__lvl-1">
+                                    <svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L13.5 12L26 1" stroke="#1D1D1D"/>
+                                    </svg>
+                                </div>
+                                <ul class="header__menu--mob__submenu collapse catalog__lvl-1">
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Блузки</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Брюки</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Блейзеры</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Джемперы</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Брюки</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Водолазки</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Юбки</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Платья</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Кардиганы</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Рубашки</a></li>
+                                </ul>
+                            </li>
+                            <li class="header__menu--mob__item">
+                                <div class="header__menu--mob__item--link">
+                                    <a href="#">Новинки</a>
+                                    </div>
+                            </li>
+                            <li class="header__menu--mob__item">
+                                <div class="header__menu--mob__item--link">
+                                    <a href="#">Помощь</a>
+                                </div>
+                                <div class="header__menu--mob__toggle" data-toggle="collapse" data-target=".help__lvl-1">
+                                    <svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L13.5 12L26 1" stroke="#1D1D1D"/>
+                                    </svg>
+                                </div>
+                                <ul class="header__menu--mob__submenu collapse help__lvl-1">
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Не Доставка</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Доставка</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Что-нибудь еще</a></li>
+                                </ul>
+                            </li>
+                            <li class="header__menu--mob__item">
+                                <div class="header__menu--mob__item--link">
+                                    <a href="#">Информация</a>
+                                </div>
+                                <div class="header__menu--mob__toggle" data-toggle="collapse" data-target=".information__lvl-1">
+                                    <svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L13.5 12L26 1" stroke="#1D1D1D"/>
+                                    </svg>
+                                </div>
+                                <ul class="header__menu--mob__submenu collapse information__lvl-1">
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Не Доставка</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Доставка</a></li>
+                                    <li class="header__menu--mob__submenu--link"><a href="#">Что-нибудь еще</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="header__menu--mob__social">
+                            
+                        </div>
+                    </div>
                 </nav>
                 <div class="header__panel">
                     <div class="header__panel__items">
@@ -176,6 +253,7 @@
         </div>
     </header>
     <main>
+        <div class="container">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, omnis, ab ipsam voluptates illo perferendis
         reprehenderit veritatis nulla odio nam esse pariatur accusantium nostrum id quos maxime ullam facilis debitis!
         Blanditiis numquam temporibus eum maxime tempore error consequuntur iure cum fuga nulla repellendus harum dolor
@@ -227,6 +305,7 @@
         asperiores vitae exercitationem.
         Nisi est, consequuntur dignissimos accusamus, adipisci maxime molestiae quia minus velit quos ad beatae magnam
         culpa! Earum fugiat voluptatem repellat pariatur magnam sunt sapiente excepturi ipsa, porro ipsam maxime nihil!
+    </div>
     </main>
     <footer>
         <script src="/js/core.js"></script>

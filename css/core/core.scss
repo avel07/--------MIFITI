@@ -1,0 +1,209 @@
+// Переменные
+@import "variables";
+// Сбрасываем стили
+@import "reboot";
+// Миксины
+@import "mixins";
+// Сгенерированные классы 
+@import "classes-generation";
+html,body{height:100%}
+body{background:#fff;font-family:'Gilroy';@include color(color,black);font-size:14px;min-width:320px;font-weight:400;width:100%;overflow:hidden;overflow-x:hidden;overflow-y:auto;display:flex;flex-direction:column}
+
+// header
+.header{
+    &__home{
+        background-color: rgba(29, 29, 29, 0.7);
+        position: relative;
+        z-index: 101;
+        @include media("max", "lg"){
+            @include color(background-color, black);
+            width: 100vw;
+        }
+    }
+    &__items{
+        align-items: center;
+        justify-content: space-between;
+        @include media("max", "lg"){
+            flex-direction: column;
+        }
+    }
+    &__panel{
+        @include media("max", "lg"){
+            margin: rem(16px) 0 rem(10) 0;
+            width: 100%;
+        }
+        &__mobile--navbar{
+            cursor: pointer;
+            svg{
+                rect{
+                    transition: fill .15s linear;
+                    fill: white;
+                }
+            }
+            &:hover{
+                svg rect{
+                    @include color(fill, brown);
+                }
+            }
+            @include media('min', 'lg'){
+                display: none;
+            }
+        }
+        &__items{
+            display: flex;
+            align-items: center;
+            @include media("max", "lg"){
+                justify-content: space-evenly;
+            }
+        }
+        &__item{
+            display: flex;
+            margin: 0 0 0 rem(18);
+            align-items: center;
+            @include media('max', 'lg'){
+                margin: 0;
+            }
+            .header__panel__basket.active, .header__panel__favorites.active{
+                svg path{@include color(fill, brown)}
+                +.favorites__quantity, +.basket__quantity{
+                    padding: 0 0 0 rem(10);
+                    @include color(color, brown);
+                }
+            }
+            svg{
+                @include media('max', 'sm'){
+                    width: 16px;
+                }
+                path{
+                    transition: fill .15s linear;
+                    @include color(fill, white);
+                }
+            } 
+            &:hover svg path{
+                @include color(fill, brown);
+            }
+        }
+    }
+    &__logo{
+        @include media("max", "lg"){
+            margin: rem(12) 0 0 0;
+        }
+    }
+    &__menu__items, &__panel__items{
+        display: flex;
+    }
+    &__menu__items{
+        @include media("max", "lg"){
+            display: none;
+        }
+    }
+    &__items{
+        .header__logo{
+            &__icon{
+                svg path{
+                    transition: fill .15s linear;
+                    @include color(fill, white);
+                }
+            &:hover{
+                svg path{
+                    @include color(fill, brown);
+                }
+            }
+            }
+        }
+        .header__menu__item{
+            padding: rem(30) rem(20);
+            @include color(color,white);
+            &:hover{
+                a{@include color(color, menu-brown);}
+            }
+            a{
+                @include color(color, white);
+                text-decoration: none;
+                transition: color .15s linear;
+                @include font(400, 16px, 19px);
+                &:hover{
+                    @include color(color, menu-brown);
+                }
+            }
+            .header__submenu{
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 100%;
+                background-color: white;
+                transition: all .3s linear;
+                visibility: hidden;
+                opacity: 0;
+                transform: translate(0px, -10px);
+                padding: 2rem 0;
+                a{
+                    @include color(color, main-black);
+                    position: relative;
+                    @include font(400, 15px, 17px);
+                    &::after { 
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        display: block;
+                        background: none repeat scroll 0 0 transparent;
+                        height: 1px;
+                        width: 0;
+                        @include color (background-color, main-black);
+                        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                      }
+                      &:hover::after { 
+                        width: 100%; 
+                        left: 0; 
+                      }
+                }
+                .header__submenu__items{
+                    align-items: center;
+                    &--links{
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        padding: 4rem 0;
+                        max-height: rem(250px);
+                    }
+                    &--link{
+                        margin: 0 0 rem(20);
+                    }
+                }
+            }
+            &:hover{
+                .header__submenu{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate(0px, 0px);
+                }
+            }
+        }
+    }
+}
+
+// Overlay
+body .overlay__blur{
+    transition: background .35s linear;
+}
+body.popup__show .overlay__blur{
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    z-index: 100;
+    background: rgba(0,0,0,.3);
+    transition: background .35s linear;
+}
+
+// Mobmenu
+body.lock__screen{
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}

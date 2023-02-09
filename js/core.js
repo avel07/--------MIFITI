@@ -1,6 +1,4 @@
 const body = document.body;
-let screen__lock = false;
-let bodyScrollTop = null;
 const core = function () {
     return {
         init: () => {
@@ -41,22 +39,13 @@ const core = function () {
             // })
         },
         LockScreen: () => {
-            if (!screen__lock) {
-                bodyScrollTop = (typeof window.scrollY !== 'undefined') ? window.scrollY : (document.documentElement || body.parentNode || body).scrollTop;
-                body.classList.add('lock__screen');
-                body.style.top = `-${bodyScrollTop}px`;
                 body.style.paddingRight = window.innerWidth - document.getElementsByTagName('html')[0].clientWidth + 'px';
-                screen__lock = true;
-            };
+                body.classList.add('lock__screen');
         },
         UnlockScreen: () => {
-            if (screen__lock) {
-                body.classList.remove('lock__screen');
-                body.style.top = null;
-                window.scrollTo(0, bodyScrollTop);
                 body.style.paddingRight = null;
-                screen__lock = false;
-            }
+                body.classList.remove('lock__screen');
+                
         }
     }
 }();
@@ -65,3 +54,24 @@ core.init();
 document.addEventListener('DOMContentLoaded', () => {
     console.log('123');
 })
+
+
+// // ScreenLock Для iPhone, но надо потестировать.
+// let screen__lock = false;
+// let bodyScrollTop = null;
+// // Открываем
+// if (!screen__lock) {
+//     bodyScrollTop = (typeof window.scrollY !== 'undefined') ? window.scrollY : (document.documentElement || body.parentNode || body).scrollTop;
+//     body.classList.add('lock__screen');
+//     body.style.top = `-${bodyScrollTop}px`;
+//     body.style.paddingRight = window.innerWidth - document.getElementsByTagName('html')[0].clientWidth + 'px';
+//     screen__lock = true;
+// };
+// // Закрываем
+// if (screen__lock) {
+//     body.classList.remove('lock__screen');
+//     body.style.top = null;
+//     window.scrollTo(0, bodyScrollTop);
+//     body.style.paddingRight = null;
+//     screen__lock = false;
+// }

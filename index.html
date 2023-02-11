@@ -619,6 +619,7 @@
                 <div class="header__personal--title">
                     Авторизация
                 </div>
+                <div class="header__personal--form">
                 <form>
                     <div class="form__block">
                         <label class="form__label" for="auth__phone">Телефон</label>
@@ -635,28 +636,67 @@
                     </button>
                 </form>
                 </div>
+                </div>
                 <div class="header__personal--reg" data-tab="body">
                 <div class="header__personal--title">
                     Регистрация
+                    <div class="header__personal--subtitle">
+                        Заполните простую форму регистрации 
+                        и станьте участником клуба MI FI TI
+                    </div>
                 </div>
-                <div class="header__personal--subtitle">
-                    Заполните простую форму регистрации 
-                    и станьте участником клуба MI FI TI
-                </div>
+                <div class="header__personal--form">
+                <form>
+                    <div class="form__block">
+                        <label class="form__label" for="reg__email">Эл. Адрес</label>
+                        <input class="form__input" type="email" id="reg__email" aria-required="true" placeholder="" required>
+                        <span class="form__error">Заполните обязательные поля</span>
+                    </div>
+                    <div class="form__block">
+                        <label class="form__label" for="reg__tel">Мобильный телефон</label>
+                        <input class="form__input" type="tel" id="reg__tel" data-mask="phone" aria-required placeholder="+7(___)___-__-__" required>
+                        <span class="form__error">Заполните обязательные поля</span>
+                    </div>
+                    <div class="form__block">
+                        <label class="form__label" for="reg__password">Пароль</label>
+                        <input class="form__input" type="password" id="auth__password" aria-required placeholder="" required>
+                        <span class="form__error">Заполните обязательные поля</span>
+                    </div>
+                    <div class="form__block">
+                        <label class="form__label" for="reg__password2">Подтверждение пароля</label>
+                        <input class="form__input" type="password" id="reg__password2" aria-required placeholder="" required>
+                        <span class="form__error">Заполните обязательные поля</span>
+                    </div>
+                    <button class="btn btn__main--black header__personal--reg__submit" type="submit">
+                        Зарегистироваться
+                    </button>
+                </form>
+            </div>
                 </div>
                 <div class="header__personal--pass" data-tab="body">
                 <div class="header__personal--title">
                     Восстановление пароля
                 </div>
+                <div class="header__personal--form">
+                    <form>
+                        <div class="form__block">
+                            <label class="form__label" for="pass__phone">Телефон</label>
+                            <input class="form__input" type="tel" data-mask="phone" id="pass__phone" aria-required="true" placeholder="+7(___)___-__-__" required>
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                        <button class="btn btn__main--black header__personal--pass__submit" type="submit">
+                            Восстановить
+                        </button>
+                    </form>
+                    </div>
                 </div>
             </div>
-            <div class="header__personal--tabs__titles">
-                <div class="header__personal--tabs__title active" data-tab="title">Авторизация</div>
-                <div class="header__personal--tabs__title" data-tab="title">Регистрация</div>
-                <div class="header__personal--tabs__title" data-tab="title">Забыли пароль?</div>
-            </div>
         </div>
-
+        <div class="header__personal--tabs__titles">
+            <div class="header__personal--tabs__title active" data-tab="title">Авторизация</div>
+            <div class="header__personal--tabs__title" data-tab="title">Регистрация</div>
+            <div class="header__personal--tabs__title" data-tab="title">Забыли пароль?</div>
+        </div>
         </div>
         <div class="header__search">
             <div class="header__search--icon">

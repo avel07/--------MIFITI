@@ -10,6 +10,8 @@ const core = function () {
                 core.Search(),
                 core.ClickOutside(),
                 core.AuthForm(),
+                core.RegForm(),
+                core.PassForm(),
                 core.Collapse()
         },
         // Показать BackGround
@@ -151,11 +153,29 @@ const core = function () {
             })
         },
         AuthForm: () => {
-            let button = document.querySelector('button[type="submit"]');
+            let button = document.querySelector('button[type="submit"].header__personal--auth__submit');
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 if (core.FormControl(e.target)) {
                     console.log('Отправляем форму Auth')
+                }
+            })
+        },
+        RegForm: () => {
+            let button = document.querySelector('button[type="submit"].header__personal--reg__submit');
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (core.FormControl(e.target)) {
+                    console.log('Отправляем форму Reg')
+                }
+            })
+        },
+        PassForm: () => {
+            let button = document.querySelector('button[type="submit"].header__personal--pass__submit');
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (core.FormControl(e.target)) {
+                    console.log('Отправляем форму Pass')
                 }
             })
         },
@@ -210,8 +230,22 @@ const core = function () {
 }();
 core.init();
 
+     // Проверяем ширину и высоту внутреннего блока по отношению к родителю
+     Element.prototype.isOverflowing = function() {
+        return this.scrollHeight > this.clientHeight || this.scrollWidth > this.clientWidth;
+    }
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('123');
+    let zxc = document.querySelector('.header__basket--body')
+    if(zxc.isOverflowing()){
+        console.log('прокрутка есть')
+    }
+    zxc.addEventListener('scroll', () => {
+        if (zxc.scrollHeight - zxc.scrollTop === zxc.clientHeight) {
+          console.log('Прокручено до конца')
+        }
+      });
 })
 
 // // ScreenLock Для iPhone, но надо потестировать.

@@ -12,6 +12,9 @@ const core = function () {
                 core.AuthForm(),
                 core.RegForm(),
                 core.PassForm(),
+                core.SearchForm(),
+                core.ReadMore(),
+                core.addFavorite(),
                 core.Collapse()
         },
         // Показать BackGround
@@ -152,6 +155,7 @@ const core = function () {
                 core.SearchClose();
             })
         },
+        // Форма аутентификации
         AuthForm: () => {
             let button = document.querySelector('button[type="submit"].header__personal--auth__submit');
             button.addEventListener('click', (e) => {
@@ -161,6 +165,7 @@ const core = function () {
                 }
             })
         },
+        // Форма регистрации
         RegForm: () => {
             let button = document.querySelector('button[type="submit"].header__personal--reg__submit');
             button.addEventListener('click', (e) => {
@@ -170,6 +175,7 @@ const core = function () {
                 }
             })
         },
+        // Форма забыли пароль
         PassForm: () => {
             let button = document.querySelector('button[type="submit"].header__personal--pass__submit');
             button.addEventListener('click', (e) => {
@@ -178,6 +184,34 @@ const core = function () {
                     console.log('Отправляем форму Pass')
                 }
             })
+        },
+        // Форма поиска
+        SearchForm: () => {
+            let button = document.querySelector('button[type="submit"].header__search__submit');
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (core.FormControl(e.target)) {
+                    console.log('Отправляем форму Search')
+                }
+            })
+        },
+        // Добавить товар в избранное
+        addFavorite: () => {
+            let buttons = document.querySelectorAll('.catalog__item--favorite');
+            for(i=0;i<buttons.length;i++){
+                let button = buttons[i];
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if(!button.classList.contains('active')){
+                        button.classList.add('active');
+                        console.log('Отправляем в фавориты');
+                    }
+                    else{
+                        button.classList.remove('active');
+                        console.log('Убираем из фаворитов');
+                    }
+                })
+            }
         },
         // Для проверки форм (Если обратить внимание, то он находит родителей кнопки). Семантика обязательно должна быть соблюдена!!!
         FormControl: (item__submit) => {
@@ -206,6 +240,20 @@ const core = function () {
             result = [];
             return find__error;
         },
+        // Читать полностью
+        ReadMore: () => {
+            let item = document.querySelectorAll('[data-readmore]');
+            for(i=0;i<item.length;i++){
+                item[i].addEventListener('click', (e) => {
+                    if(e.target.textContent === e.target.dataset.readmore){
+                        e.target.textContent = 'Скрыть';
+                    }
+                    else if(e.target.classList.contains('collapsed')){
+                        e.target.textContent = e.target.dataset.readmore;
+                    }
+                })
+            }
+        },
         // Проверим, мобилка ли
         IsMobile: () => {
             let check = false;
@@ -219,10 +267,18 @@ const core = function () {
                 let target = togglebuttons[i];
                 let toggletarget = togglebuttons[i].dataset.target;
                 target.addEventListener('click', (e) => {
-                    target.classList.toggle('collapsed');
-                    let collapsed_block = document.querySelector(toggletarget);
-                    let collapse = new Collapse(collapsed_block);
-                    collapse.toggle();
+                    if(target.dataset.target === 'next'){
+                        target.classList.toggle('collapsed');
+                        let collapsed_block = target.nextElementSibling;
+                        let collapse = new Collapse(collapsed_block);
+                        collapse.toggle();
+                    }
+                    else{
+                        target.classList.toggle('collapsed');
+                        let collapsed_block = document.querySelector(toggletarget);
+                        let collapse = new Collapse(collapsed_block);
+                        collapse.toggle();
+                    }
                 })
             }
         },
@@ -231,10 +287,12 @@ const core = function () {
 core.init();
 
      // Проверяем ширину и высоту внутреннего блока по отношению к родителю
-     Element.prototype.isOverflowing = function() {
+    Element.prototype.isOverflowing = function() {
         return this.scrollHeight > this.clientHeight || this.scrollWidth > this.clientWidth;
     }
-
+    Element.prototype.isScrolled = function() {
+        return this.scrollHeight - this.scrollTop === this.clientHeight
+    }
 
 document.addEventListener('DOMContentLoaded', () => {
     let zxc = document.querySelector('.header__basket--body')
@@ -242,11 +300,37 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('прокрутка есть')
     }
     zxc.addEventListener('scroll', () => {
-        if (zxc.scrollHeight - zxc.scrollTop === zxc.clientHeight) {
+        if (zxc.isScrolled()) {
           console.log('Прокручено до конца')
         }
       });
 })
+
+// HomeSlider
+const homeSlider = new Swiper('.main__slider .swiper', {
+    speed:600,autoHeight:true,slidesPerView: 1,spaceBetween: 0, slideActiveClass: 'active',
+    navigation: {nextEl: '.main__slider .main__slider--next',prevEl: '.main__slider .main__slider--prev'},
+    autoplay: {delay: 6000}
+});
+
+const homeSection = new Swiper('.catalog__section .swiper', {
+    speed:600,autoHeight:true,slidesPerView: 3,spaceBetween: 7, slideActiveClass: 'active',
+    navigation: {nextEl: '.catalog__section .catalog__section__slider--next',prevEl: '.catalog__section .catalog__section__slider--prev'},
+    breakpoints: {
+        0: {
+            slidesPerView: 'auto',
+            spaceBetween: 5,      
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 5
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 7
+        }
+      }
+});
 
 // // ScreenLock Для iPhone, но надо потестировать.
 // let screen__lock = false;

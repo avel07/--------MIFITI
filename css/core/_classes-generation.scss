@@ -29,6 +29,7 @@
     width: auto;
     max-width: 100%;
 }
+
 // Генерируем container
 @mixin make-max-width-container($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints){
     @each $breakpoint, $max-width in $max-widths{
@@ -53,7 +54,34 @@
     padding-left: calc($grid-gutter-width - $grid-gap-side);
     @include make-max-width-container;
 }
+// container nopadding
+@each $bp, $width in $grid-breakpoints {
+    @include media_max($width) {
+            .container__nopadding-#{$bp}{
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+                padding-right: 0;
+                padding-left: 0;
+            }
+    }
+}
 // row
 .row{
     @include row;
+}
+// row nopadding
+@each $bp, $width in $grid-breakpoints {
+    @include media_max($width) {
+            .row__nopadding-#{$bp} > * {
+                flex-shrink: 0;
+                padding-left: 0;
+                padding-right: 0;
+                max-width: 100%;
+            }
+    }
+}
+//Collapse
+.collapse:not(.show) {
+    display: none;
 }

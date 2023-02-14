@@ -31,12 +31,19 @@
 // Миксин колонки
 @mixin col($size) {
   flex: 0 0 auto;
-  width: calc((#{percentage($size / $grid-columns)}) - #{$grid-gap});
+  width: (#{percentage($size / $grid-columns)});
+  padding-right: #{$grid-gap-side};
+  padding-left: #{$grid-gap-side};
 }
 
 // Миксин для генерации медиазапросов колонок 
 @mixin media_query($width) {
   @media(min-width: $width) {
+    @content;
+  }
+}
+@mixin media_max($width){
+  @media(max-width: $width) {
     @content;
   }
 }
@@ -62,16 +69,14 @@
 @mixin row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -$grid-gap-side;
-  margin-right: -$grid-gap-side;
 
   >* {
-    margin-left: $grid-gap-side;
-    margin-right: $grid-gap-side;
+    flex-shrink: 0;
+    padding-left: $grid-gap-side;
+    padding-right: $grid-gap-side;
     max-width: 100%;
   }
 }
-
 // Для Retina Display, чтобы background был x2
 @mixin image-2x($image, $width, $height) {
 

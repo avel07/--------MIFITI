@@ -279,13 +279,11 @@ const core = function () {
                                 this.classList.add('show')
                                 item__body.classList.add('show');   
                             }
-                            else{
-                                item.addEventListener('click', function(e) {
+                            else if(window.innerWidth < 768){
                                     this.classList.toggle('collapsed');
                                     let collapsed_block = this.nextElementSibling;
                                     let collapse = new Collapse(collapsed_block);
                                     collapse.toggle();
-                                })
                             }
                         })
                         document.addEventListener('click', (e) => {
@@ -322,6 +320,10 @@ const core = function () {
                     }
                     if(close__filter){
                         close__filter.addEventListener('click', () => {
+                            for(i=0;i<items.length;i++){
+                                items[i].nextElementSibling.classList.remove('show');
+                                items[i].classList.remove('show');
+                            }
                             body.classList.remove('show__filter');
                             core.UnlockScreen();
                         })

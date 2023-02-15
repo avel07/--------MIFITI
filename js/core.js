@@ -3,7 +3,7 @@ let outsite = false;
 const core = function () {
     return {
         init: () => {
-            core.Submenu(),
+                core.Submenu(),
                 core.MobMenu(),
                 core.Basket(),
                 core.Personal(),
@@ -15,6 +15,7 @@ const core = function () {
                 core.SearchForm(),
                 core.ReadMore(),
                 core.addFavorite(),
+                core.Filters(),
                 core.Collapse()
         },
         // Показать BackGround
@@ -254,6 +255,79 @@ const core = function () {
                 })
             }
         },
+        Filters: () => {
+            let items = document.querySelectorAll('.catalog__filter--item__title');
+            let open__filter = document.querySelector('.catalog__filter--open');
+            let close__filter = document.querySelector('.catalog__filter--mob__close');
+                if (items.length > 0){
+                    for(i=0;i<items.length;i++){
+                        let item = items[i];
+                        let item__body = item.nextElementSibling;
+                        item.addEventListener('click', function(e) {
+                            if(window.innerWidth > 768){
+                                if(item__body.classList.contains('show') && this.classList.contains('show')){
+                                    this.classList.remove('show')
+                                    item__body.classList.remove('show')
+                                    return false
+                                }
+                                for(j=0;j<items.length;j++){
+                                    if(items[j].nextElementSibling.classList.contains('show')){
+                                        items[j].classList.remove('show');
+                                        items[j].nextElementSibling.classList.remove('show')
+                                    }
+                                }
+                                this.classList.add('show')
+                                item__body.classList.add('show');   
+                            }
+                            else{
+                                item.addEventListener('click', function(e) {
+                                    this.classList.toggle('collapsed');
+                                    let collapsed_block = this.nextElementSibling;
+                                    let collapse = new Collapse(collapsed_block);
+                                    collapse.toggle();
+                                })
+                            }
+                        })
+                        document.addEventListener('click', (e) => {
+                            if(!e.composedPath().includes(document.querySelector('.catalog__filter--items')))
+                            {
+                                for(i=0;i<items.length;i++){
+                                    items[i].nextElementSibling.classList.remove('show');
+                                    items[i].classList.remove('show');
+                                }
+                            }
+                        })
+                    }
+                }
+                if(core.IsMobile()){
+                    if(open__filter){
+                        open__filter.addEventListener('touchstart', () =>{
+                            body.classList.add('show__filter');
+                            core.LockScreen();
+                        })
+                    }
+                    if(close__filter){
+                        close__filter.addEventListener('touchstart', () => {
+                            body.classList.remove('show__filter');
+                            core.UnlockScreen();
+                        })
+                    }
+                }
+                else{
+                    if(open__filter){
+                        open__filter.addEventListener('click', () =>{
+                            body.classList.add('show__filter');
+                            core.LockScreen();
+                        })
+                    }
+                    if(close__filter){
+                        close__filter.addEventListener('click', () => {
+                            body.classList.remove('show__filter');
+                            core.UnlockScreen();
+                        })
+                    }
+                }
+            },
         // Проверим, мобилка ли
         IsMobile: () => {
             let check = false;
@@ -331,6 +405,70 @@ const homeSection = new Swiper('.catalog__section .swiper', {
         }
       }
 });
+
+
+
+// анимированно скрывает объект
+let _slideUp = (target, duration = 500) => {
+	if (!target.classList.contains('_slide')) {
+		target.classList.add('_slide')
+		target.style.transitionProperty = 'height, margin, padding'
+		target.style.transitionDuration = duration + 'ms'
+		target.style.height = target.offsetHeight + 'px'
+		target.offsetHeight
+		target.style.overflow = 'hidden'
+		target.style.height = 0
+		target.style.paddintTop = 0
+		target.style.paddingBottom = 0
+		target.style.marginTop = 0
+		target.style.marginBottom = 0
+		window.setTimeout(() => {
+			target.hidden = true;
+			target.style.removeProperty('height')
+			target.style.removeProperty('padding-top')
+			target.style.removeProperty('padding-bottom')
+			target.style.removeProperty('margin-top')
+			target.style.removeProperty('margin-bottom')
+			target.style.removeProperty('overflow')
+			target.style.removeProperty('transition-duration')
+			target.style.removeProperty('transition-property')
+			target.classList.remove('_slide')
+		}, duration);
+	}
+}
+
+// анимированно показывает объект
+let _slideDown = (target, duration = 500) => {
+	if (!target.classList.contains('_slide')) {
+		target.classList.add('_slide')
+		if (target.hidden) {
+			target.hidden = false
+		}
+		let height = target.offsetHeight
+		target.style.overflow = 'hidden'
+		target.style.height = 0
+		target.style.paddintTop = 0
+		target.style.paddingBottom = 0
+		target.style.marginTop = 0
+		target.style.marginBottom = 0
+		target.offsetHeight
+		target.style.transitionProperty = 'height, margin, padding'
+		target.style.transitionDuration = duration + 'ms'
+		target.style.height = height + 'px'
+		target.style.removeProperty('padding-top')
+		target.style.removeProperty('padding-bottom')
+		target.style.removeProperty('margin-top')
+		target.style.removeProperty('margin-bottom')
+		window.setTimeout(() => {
+			target.style.removeProperty('height')
+			target.style.removeProperty('overflow')
+			target.style.removeProperty('transition-duration')
+			target.style.removeProperty('transition-property')
+			target.classList.remove('_slide')
+		}, duration)
+	}
+}
+
 
 // // ScreenLock Для iPhone, но надо потестировать.
 // let screen__lock = false;

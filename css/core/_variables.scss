@@ -29,6 +29,7 @@ $sale: #FF5B5B !default;
 $filter-gray: #EEEDED !default;
 $breadcrumbs-gray: #8B8486 !default;
 $article-gray: #8B8B8B !default;
+$white-gray: #6B6364 !default;
 // Цвета для генерации
 $colors: (
 "black": $black,
@@ -44,6 +45,7 @@ $colors: (
 "filter-gray": $filter-gray,
 "breadcrumbs-gray": $breadcrumbs-gray,
 "article-gray": $article-gray,
+"white-gray": $white-gray,
 ) !default;
 // Для геренации font-face
 $font-face: (

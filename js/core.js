@@ -17,6 +17,7 @@ const core = function () {
                 core.ReadMore(),
                 core.addFavorite(),
                 core.Filters(),
+                core.ChangeSku(),
                 core.Scrolled(),
                 core.Collapse()
         },
@@ -299,6 +300,25 @@ const core = function () {
                         })
                     }
             },
+        ChangeSku: () => {
+            let items = document.querySelectorAll('.catalog__element--info__sku--property__properties');
+            for(i=0;i<items.length;i++){
+                let item = items[i]
+                item.addEventListener('click', (e) => {
+                    if(e.target.classList.contains('catalog__element--info__sku--property__item')){
+                        let sku = e.target;
+                        let items = sku.parentElement.children;
+                        for(item of items){
+                            if(item.classList.contains('active')){
+                                item.classList.remove('active');
+                            }
+                                e.target.classList.add('active');
+                        }
+                        console.log('Получаем данные об этом ТП - ' + e.target.textContent);
+                    }
+                })
+            }
+        },
         // Проверим, мобилка ли
         IsMobile: () => {
             let check = false;
@@ -428,7 +448,17 @@ const homeSection = new Swiper('.catalog__section .swiper', {
       }
 });
 
-const catalogElement = new Swiper('')
+// const catalogElementsThumbs = new Swiper('.catalog__element--gallery__thumbs .swiper', {
+//     direction: 'vertical',
+//     slidesPerView: 5,
+//     spaceBetween: 4,
+//     watchSlidesVisibility: true,
+//     watchSlidesProgress: true,
+// });
+
+const catalogElements = new Swiper('.catalog__element--gallery__images .swiper', {
+    slidesPerView : 1
+}) ;
 
 // // ScreenLock Для iPhone, но надо потестировать.
 // let screen__lock = false;

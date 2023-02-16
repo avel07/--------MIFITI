@@ -737,590 +737,163 @@
         <div class="breadcrumbs">
             <div class="container">
                 <div class="breadcrumbs__items">
-            <div class="breadcrumbs__item">
-                <a class="breadcrumbs__item--link" href="#">
-                    Главная
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__item--link" href="#">
+                            Главная
+                        </a>
+                    </div>
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__item--link" href="#">
+                            Каталог
+                        </a>
+                    </div>
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__item--link" href="#">
+                            Платья
+                        </a>
+                    </div>
+                    <div class="breadcrumbs__item">
+                        Платье комбинация на бретельках
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="link__back">
+            <div class="container">
+                <a href="#">
+                    <div class="row">
+                        <div class="link__back--icon">
+                            <svg width="21" height="12" viewBox="0 0 21 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.469669 5.46967C0.176777 5.76256 0.176777 6.23744 0.469669 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989594 6.3033 0.6967C6.01041 0.403807 5.53553 0.403807 5.24264 0.696701L0.469669 5.46967ZM21 5.25L1 5.25L1 6.75L21 6.75L21 5.25Z"
+                                    fill="#1D1D1D" />
+                            </svg>
+                        </div>
+                        <div class="link__back--title">Назад</div>
+                    </div>
                 </a>
             </div>
-            <div class="breadcrumbs__item">
-                <a class="breadcrumbs__item--link" href="#">
-                    Каталог
-                </a>
-            </div>
-            <div class="breadcrumbs__item">
-                Платья
-            </div>
         </div>
-    </div>
-    </div>
-        <!--END Breadcrumbs -->
-        <!--PageTitle-->
-        <div class="page__title">
-            <div class="container">
-                <div class="row">
-                    <h1>Платья</h1>
-                </div>
-            </div>
-        </div>
-        <!--END PageTitle-->
-        <div class="catalog__filter">
-            <div class="container">
-                <div class="catalog__filter--block row">
-                <form method="get" class="catalog__filter--form col-xxl-10 col-xl-9 col-lg-9 col-md-8">
-                    <div class="catalog__filter--mob">
-                        <div class="catalog__filter--mob__title">
-                            Фильтры
-                        </div>
-                        <div class="catalog__filter--mob__close">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 23.9993L24 1" stroke="#1D1D1D" stroke-linecap="round"></path>
-                                <path d="M1 1.0007L24 24" stroke="#1D1D1D" stroke-linecap="round"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="catalog__filter--items">
-                    <div class="catalog__filter--item">
-                        <div class="catalog__filter--item__title">Цена
-                            <div class="catalog__filter--item__icon">
-                                <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L8.5 8L16 1" stroke="#1D1D1D"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="catalog__filter--item__body collapse">
-                            <div class="catalog__filter--item__body--items catalog__filter--item__body--price">
-                            <div class="catalog__filter--item__body--item catalog__filter--item__body--item__price form__block">
-                                <label for="price__min" class="form__label">Мin цена (р.)</label>
-                                <input type="text" class="form__input" name="price__min" id="price__min" value="0">
-                            </div>
-                            <div class="catalog__filter--item__body--item catalog__filter--item__body--item__price form__block">
-                                <label for="price__max" class="form__label">Max цена (р.)</label>
-                                <input type="text" class="form__input" name="price__max" id="price__max" value="5000">
-                            </div>
-                        </div>
-                        <div class="catalog__filter--item__body--submit">
-                            <button type="submit" class="btn btn__main--black">Применить</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="catalog__filter--item">
-                        <div class="catalog__filter--item__title">Цвет
-                            <div class="catalog__filter--item__icon">
-                                <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L8.5 8L16 1" stroke="#1D1D1D"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="catalog__filter--item__body collapse">
-                            <div class="catalog__filter--item__body--items">
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="white" id="value-white" value="value-white">
-                                <label for="value-white">Белый</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="beige" id="value-beige" value="value-beige">
-                                <label for="value-beige">Бежевый</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="blue" id="value-blue-2" value="value-blue-2">
-                                <label for="value-blue-2">Голубой</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="yellow" id="value-yellow" value="value-yellow">
-                                <label for="value-yellow">Желтый</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="blue" id="value-blue" value="value-blue">
-                                <label for="value-blue">Синий</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="black" id="value-black" value="value-black">
-                                <label for="value-black">Черный</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="chocolade" id="value-chocolade" value="value-chocolade">
-                                <label for="value-chocolade">Шоколадный</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="emerald" id="value-emerald" value="value-emerald" checked>
-                                <label for="value-emerald">Изумрудный</label>
-                            </div>
-                        </div>
-                        <div class="catalog__filter--item__body--submit">
-                            <button type="submit" class="btn btn__main--black">Применить</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="catalog__filter--item">
-                        <div class="catalog__filter--item__title">Размер
-                            <div class="catalog__filter--item__icon">
-                                <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L8.5 8L16 1" stroke="#1D1D1D"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="catalog__filter--item__body collapse">
-                            <div class="catalog__filter--item__body--items">
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="XS" id="value-XS" value="value-XS" checked>
-                                <label for="value-XS">XS</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="S" id="value-S" value="value-S">
-                                <label for="value-S">S</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="M" id="value-M" value="value-M">
-                                <label for="value-M">M</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="L" id="value-L" value="value-L">
-                                <label for="value-L">L</label>
-                            </div>
-                            <div class="catalog__filter--item__body--item">
-                                <input type="checkbox" name="XL" id="value-XL" value="value-XL">
-                                <label for="value-XL">XL</label>
-                            </div>
-                        </div>
-                        <div class="catalog__filter--item__body--submit">
-                            <button type="submit" class="btn btn__main--black">Применить</button>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                    <div class="catalog__filter--mob__submit">
-                            <button type="submit" class="btn btn__main--black">Применить и закрыть</button>
-                    </div>
-                </form>
-                <div class="catalog__filter--open col-sm-4 col-xs-4">
-                    <div class="catalog__filter--open__icon">
-                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.48409 2.59259H0.555556C0.248731 2.59259 0 2.34386 0 2.03704C0 1.73021 0.248731 1.48148 0.555556 1.48148H7.48409C7.72591 0.62648 8.51202 0 9.44444 0C10.3769 0 11.163 0.62648 11.4048 1.48148H12.4074C12.7142 1.48148 12.963 1.73021 12.963 2.03704C12.963 2.34386 12.7142 2.59259 12.4074 2.59259H11.4048C11.163 3.44759 10.3769 4.07407 9.44444 4.07407C8.51202 4.07407 7.72591 3.44759 7.48409 2.59259ZM8.51852 2.03704C8.51852 1.52566 8.93307 1.11111 9.44444 1.11111C9.95582 1.11111 10.3704 1.52566 10.3704 2.03704C10.3704 2.54841 9.95582 2.96296 9.44444 2.96296C8.93307 2.96296 8.51852 2.54841 8.51852 2.03704Z" fill="#1D1D1D"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.47888 8.51852H12.4074C12.7142 8.51852 12.963 8.26979 12.963 7.96296C12.963 7.65614 12.7142 7.40741 12.4074 7.40741H5.47888C5.23705 6.5524 4.45095 5.92593 3.51852 5.92593C2.58609 5.92593 1.79999 6.5524 1.55816 7.40741H0.555556C0.248731 7.40741 0 7.65614 0 7.96296C0 8.26979 0.248731 8.51852 0.555556 8.51852H1.55816C1.79999 9.37352 2.58609 10 3.51852 10C4.45095 10 5.23705 9.37352 5.47888 8.51852ZM2.59259 7.96296C2.59259 7.45159 3.00714 7.03704 3.51852 7.03704C4.02989 7.03704 4.44444 7.45159 4.44444 7.96296C4.44444 8.47434 4.02989 8.88889 3.51852 8.88889C3.00714 8.88889 2.59259 8.47434 2.59259 7.96296Z" fill="#1D1D1D"/>
-                        </svg>
-                    </div>
-                    <div class="catalog__filter--open__title">
-                        Фильтры
-                    </div>
-                </div>
-                <div class="catalog__filter--deleteAll col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-8 col-xs-8">
-                    <div class="catalog__filter--deleteAll__icon">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.999821 10.9997L10.9995 1" stroke="#1D1D1D" stroke-linecap="round"/>
-                            <path d="M0.999822 1.00031L10.9995 11" stroke="#1D1D1D" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="catalog__filter--deleteAll__title">Очистить все фильтры</div> 
-                </div>
-            </div>
-            <div class="catalog__filter--selected">
-                <div class="catalog__filter--selected__items">
-                    <div class="catalog__filter--selected__item">
-                        <div class="catalog__filter--selected__item--name">Изумрудный</div>
-                        <div class="catalog__filter--selected__item--remove">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.999821 10.9997L10.9995 1" stroke="#1D1D1D" stroke-linecap="round"/>
-                                <path d="M0.999822 1.00031L10.9995 11" stroke="#1D1D1D" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="catalog__filter--selected__item">
-                        <div class="catalog__filter--selected__item--name">XS</div>
-                        <div class="catalog__filter--selected__item--remove">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.999821 10.9997L10.9995 1" stroke="#1D1D1D" stroke-linecap="round"/>
-                                <path d="M0.999822 1.00031L10.9995 11" stroke="#1D1D1D" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- section NEW -->
         <div class="catalog">
             <div class="container container__nopadding-sm">
-                <div class="catalog__items catalog__new--items">
-                    <div class="row row__nopadding-sm">
-                        <div class="col-lg-3 col-sm-6 col-xs-12">
-                            <div class="catalog__item">
-                                <div class="catalog__item--body">
-                                    <a href="#">
-                                        <div class="catalog__item--image">
-                                            <img src="/img/catalog/1_Монтажная область 1 копия 3 1.jpg" alt="">
-                                        </div>
-                                        <!-- <div class="catalog__item--button catalog__item--addBasket">
-                                    <button class="btn btn__main--white">В корзину</button>
-                                </div> -->
-                                        <div class="catalog__item--favorite active">
-                                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.1339 4.02526C15.6246 3.56348 16.0293 3.14514 16.4726 2.77105C21.1072 -1.13638 28.1619 1.36158 29.2528 7.31806C29.7186 9.86349 29.0251 12.1241 27.3019 14.0613C27.1884 14.1885 27.0661 14.3083 26.9463 14.429C23.2552 18.12 19.5642 21.8102 15.8732 25.5005C15.3543 26.0194 15.0196 26.0194 14.5007 25.4989C10.7928 21.7829 7.08248 18.0685 3.37698 14.3502C0.269211 11.2335 0.18313 6.45484 3.17103 3.29478C6.05836 0.242526 11.0688 0.092085 14.1443 2.97298C14.4879 3.29478 14.7912 3.65922 15.1331 4.02446L15.1339 4.02526Z"
-                                                    fill="none" stroke="white" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="catalog__item--name">
-                                    Трикотажные брюки прямые
-                                </div>
-                                <div class="catalog__item--bottom">
-                                    <div class="catalog__item--prices">
-                                        <div class="catalog__item--price price__old">
-                                            4 000 р.
-                                        </div>
-                                        <div class="catalog__item--price price__discount">
-                                            3 500 р.
-                                        </div>
+                <div class="catalog__element row">
+                    <div class="col-lg-6">
+                        <div class="catalog__element--gallery">
+                            <div class="catalog__element--gallery__thumbs">
+                                <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__element--gallery__thumb">
+                                        <img src="/img/element__thumb.jpg" alt="">
                                     </div>
-                                    <div class="catalog__item--stickers">
-                                        <div class="catalog__item--sticker catalog__item--sticker__new">
-                                            NEW
-                                        </div>
+                                    <div class="swiper-slide catalog__element--gallery__thumb">
+                                        <img src="/img/element__thumb.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__element--gallery__thumb">
+                                        <img src="/img/element__thumb.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__element--gallery__thumb">
+                                        <img src="/img/element__thumb.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__element--gallery__thumb">
+                                        <img src="/img/element__thumb.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__element--gallery__thumb">
+                                        <img src="/img/element__thumb.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-12">
-                            <div class="catalog__item">
-                                <div class="catalog__item--body">
-                                    <a href="#">
-                                        <div class="catalog__item--image">
-                                            <img src="/img/catalog/21f188e84d2b865ddace9dc22f0dcc71 1.jpg" alt="">
-                                        </div>
-                                        <!-- <div class="catalog__item--button catalog__item--addBasket">
-                                    <button class="btn btn__main--white">В корзину</button>
-                                </div> -->
-                                        <div class="catalog__item--favorite">
-                                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.1339 4.02526C15.6246 3.56348 16.0293 3.14514 16.4726 2.77105C21.1072 -1.13638 28.1619 1.36158 29.2528 7.31806C29.7186 9.86349 29.0251 12.1241 27.3019 14.0613C27.1884 14.1885 27.0661 14.3083 26.9463 14.429C23.2552 18.12 19.5642 21.8102 15.8732 25.5005C15.3543 26.0194 15.0196 26.0194 14.5007 25.4989C10.7928 21.7829 7.08248 18.0685 3.37698 14.3502C0.269211 11.2335 0.18313 6.45484 3.17103 3.29478C6.05836 0.242526 11.0688 0.092085 14.1443 2.97298C14.4879 3.29478 14.7912 3.65922 15.1331 4.02446L15.1339 4.02526Z"
-                                                    fill="none" stroke="white" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="catalog__item--name">
-                                    Трикотажные брюки прямые
-                                </div>
-                                <div class="catalog__item--bottom">
-                                    <div class="catalog__item--prices">
-                                        <div class="catalog__item--price price__old">
-                                            4 000 р.
-                                        </div>
-                                        <div class="catalog__item--price price__discount">
-                                            3 500 р.
-                                        </div>
+                                <!-- <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div> -->
+                            </div>
+                            <div class="catalog__element--gallery__images">
+                                <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide catalog__element--gallery__image">
+                                        <img src="/img/element.jpg" alt="">
                                     </div>
-                                    <div class="catalog__item--stickers">
-                                        <div class="catalog__item--sticker catalog__item--sticker__new">
-                                            NEW
-                                        </div>
+                                    <div class="swiper-slide catalog__element--gallery__image">
+                                        <img src="/img/element.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__element--gallery__image">
+                                        <img src="/img/element.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__element--gallery__image">
+                                        <img src="/img/element.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__element--gallery__image">
+                                        <img src="/img/element.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide catalog__element--gallery__image">
+                                        <img src="/img/element.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-12">
-                            <div class="catalog__item">
-                                <div class="catalog__item--body">
-                                    <a href="#">
-                                        <div class="catalog__item--image">
-                                            <img src="/img/catalog/5496534a8e119c37530c5e6c0e36bb9e 1.jpg" alt="">
-                                        </div>
-                                        <!-- <div class="catalog__item--button catalog__item--addBasket">
-                                    <button class="btn btn__main--white">В корзину</button>
-                                </div> -->
-                                        <div class="catalog__item--favorite active">
-                                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.1339 4.02526C15.6246 3.56348 16.0293 3.14514 16.4726 2.77105C21.1072 -1.13638 28.1619 1.36158 29.2528 7.31806C29.7186 9.86349 29.0251 12.1241 27.3019 14.0613C27.1884 14.1885 27.0661 14.3083 26.9463 14.429C23.2552 18.12 19.5642 21.8102 15.8732 25.5005C15.3543 26.0194 15.0196 26.0194 14.5007 25.4989C10.7928 21.7829 7.08248 18.0685 3.37698 14.3502C0.269211 11.2335 0.18313 6.45484 3.17103 3.29478C6.05836 0.242526 11.0688 0.092085 14.1443 2.97298C14.4879 3.29478 14.7912 3.65922 15.1331 4.02446L15.1339 4.02526Z"
-                                                    fill="none" stroke="white" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="catalog__item--name">
-                                    Трикотажные брюки прямые
-                                    По центру относительно самого большого по линии
-                                </div>
-                                <div class="catalog__item--bottom">
-                                    <div class="catalog__item--prices">
-                                        <div class="catalog__item--price price__old">
-                                            4 000 р.
-                                        </div>
-                                        <div class="catalog__item--price price__discount">
-                                            3 500 р.
-                                        </div>
-                                    </div>
-                                    <div class="catalog__item--stickers">
-                                        <div class="catalog__item--sticker catalog__item--sticker__new">
-                                            NEW
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-12">
-                            <div class="catalog__item">
-                                <div class="catalog__item--body">
-                                    <a href="#">
-                                        <div class="catalog__item--image">
-                                            <img src="/img/catalog/d4616cb3f6d06774278b0d11f96f52c3 1.jpg" alt="">
-                                        </div>
-                                        <!-- <div class="catalog__item--button catalog__item--addBasket">
-                                    <button class="btn btn__main--white">В корзину</button>
-                                </div> -->
-                                        <div class="catalog__item--favorite">
-                                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.1339 4.02526C15.6246 3.56348 16.0293 3.14514 16.4726 2.77105C21.1072 -1.13638 28.1619 1.36158 29.2528 7.31806C29.7186 9.86349 29.0251 12.1241 27.3019 14.0613C27.1884 14.1885 27.0661 14.3083 26.9463 14.429C23.2552 18.12 19.5642 21.8102 15.8732 25.5005C15.3543 26.0194 15.0196 26.0194 14.5007 25.4989C10.7928 21.7829 7.08248 18.0685 3.37698 14.3502C0.269211 11.2335 0.18313 6.45484 3.17103 3.29478C6.05836 0.242526 11.0688 0.092085 14.1443 2.97298C14.4879 3.29478 14.7912 3.65922 15.1331 4.02446L15.1339 4.02526Z"
-                                                    fill="none" stroke="white" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="catalog__item--name">
-                                    Трикотажные брюки прямые
-                                    Трикотажные брюки прямые
-                                    (Адаптивность разных названий)
-                                </div>
-                                <div class="catalog__item--bottom">
-                                    <div class="catalog__item--prices">
-                                        <div class="catalog__item--price">
-                                            4 000 р.
-                                        </div>
-                                    </div>
-                                    <div class="catalog__item--stickers">
-                                        <div class="catalog__item--sticker catalog__item--sticker__new">
-                                            NEW
-                                        </div>
-                                        <div class="catalog__item--sticker catalog__item--sticker__sale">
-                                            SALE
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-12">
-                            <div class="catalog__item">
-                                <div class="catalog__item--body">
-                                    <a href="#">
-                                        <div class="catalog__item--image">
-                                            <img src="/img/catalog/1_Монтажная область 1 копия 3 1.jpg" alt="">
-                                        </div>
-                                        <!-- <div class="catalog__item--button catalog__item--addBasket">
-                                    <button class="btn btn__main--white">В корзину</button>
-                                </div> -->
-                                        <div class="catalog__item--favorite active">
-                                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.1339 4.02526C15.6246 3.56348 16.0293 3.14514 16.4726 2.77105C21.1072 -1.13638 28.1619 1.36158 29.2528 7.31806C29.7186 9.86349 29.0251 12.1241 27.3019 14.0613C27.1884 14.1885 27.0661 14.3083 26.9463 14.429C23.2552 18.12 19.5642 21.8102 15.8732 25.5005C15.3543 26.0194 15.0196 26.0194 14.5007 25.4989C10.7928 21.7829 7.08248 18.0685 3.37698 14.3502C0.269211 11.2335 0.18313 6.45484 3.17103 3.29478C6.05836 0.242526 11.0688 0.092085 14.1443 2.97298C14.4879 3.29478 14.7912 3.65922 15.1331 4.02446L15.1339 4.02526Z"
-                                                    fill="none" stroke="white" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="catalog__item--name">
-                                    Трикотажные брюки прямые
-                                </div>
-                                <div class="catalog__item--bottom">
-                                    <div class="catalog__item--prices">
-                                        <div class="catalog__item--price price__old">
-                                            4 000 р.
-                                        </div>
-                                        <div class="catalog__item--price price__discount">
-                                            3 500 р.
-                                        </div>
-                                    </div>
-                                    <div class="catalog__item--stickers">
-                                        <div class="catalog__item--sticker catalog__item--sticker__new">
-                                            NEW
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-12">
-                            <div class="catalog__item">
-                                <div class="catalog__item--body">
-                                    <a href="#">
-                                        <div class="catalog__item--image">
-                                            <img src="/img/catalog/21f188e84d2b865ddace9dc22f0dcc71 1.jpg" alt="">
-                                        </div>
-                                        <!-- <div class="catalog__item--button catalog__item--addBasket">
-                                    <button class="btn btn__main--white">В корзину</button>
-                                </div> -->
-                                        <div class="catalog__item--favorite">
-                                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.1339 4.02526C15.6246 3.56348 16.0293 3.14514 16.4726 2.77105C21.1072 -1.13638 28.1619 1.36158 29.2528 7.31806C29.7186 9.86349 29.0251 12.1241 27.3019 14.0613C27.1884 14.1885 27.0661 14.3083 26.9463 14.429C23.2552 18.12 19.5642 21.8102 15.8732 25.5005C15.3543 26.0194 15.0196 26.0194 14.5007 25.4989C10.7928 21.7829 7.08248 18.0685 3.37698 14.3502C0.269211 11.2335 0.18313 6.45484 3.17103 3.29478C6.05836 0.242526 11.0688 0.092085 14.1443 2.97298C14.4879 3.29478 14.7912 3.65922 15.1331 4.02446L15.1339 4.02526Z"
-                                                    fill="none" stroke="white" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="catalog__item--name">
-                                    Трикотажные брюки прямые
-                                </div>
-                                <div class="catalog__item--bottom">
-                                    <div class="catalog__item--prices">
-                                        <div class="catalog__item--price price__old">
-                                            4 000 р.
-                                        </div>
-                                        <div class="catalog__item--price price__discount">
-                                            3 500 р.
-                                        </div>
-                                    </div>
-                                    <div class="catalog__item--stickers">
-                                        <div class="catalog__item--sticker catalog__item--sticker__new">
-                                            NEW
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-12">
-                            <div class="catalog__item">
-                                <div class="catalog__item--body">
-                                    <a href="#">
-                                        <div class="catalog__item--image">
-                                            <img src="/img/catalog/5496534a8e119c37530c5e6c0e36bb9e 1.jpg" alt="">
-                                        </div>
-                                        <!-- <div class="catalog__item--button catalog__item--addBasket">
-                                    <button class="btn btn__main--white">В корзину</button>
-                                </div> -->
-                                        <div class="catalog__item--favorite active">
-                                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.1339 4.02526C15.6246 3.56348 16.0293 3.14514 16.4726 2.77105C21.1072 -1.13638 28.1619 1.36158 29.2528 7.31806C29.7186 9.86349 29.0251 12.1241 27.3019 14.0613C27.1884 14.1885 27.0661 14.3083 26.9463 14.429C23.2552 18.12 19.5642 21.8102 15.8732 25.5005C15.3543 26.0194 15.0196 26.0194 14.5007 25.4989C10.7928 21.7829 7.08248 18.0685 3.37698 14.3502C0.269211 11.2335 0.18313 6.45484 3.17103 3.29478C6.05836 0.242526 11.0688 0.092085 14.1443 2.97298C14.4879 3.29478 14.7912 3.65922 15.1331 4.02446L15.1339 4.02526Z"
-                                                    fill="none" stroke="white" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="catalog__item--name">
-                                    Трикотажные брюки прямые
-                                    По центру относительно самого большого по линии
-                                </div>
-                                <div class="catalog__item--bottom">
-                                    <div class="catalog__item--prices">
-                                        <div class="catalog__item--price price__old">
-                                            4 000 р.
-                                        </div>
-                                        <div class="catalog__item--price price__discount">
-                                            3 500 р.
-                                        </div>
-                                    </div>
-                                    <div class="catalog__item--stickers">
-                                        <div class="catalog__item--sticker catalog__item--sticker__new">
-                                            NEW
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-xs-12">
-                            <div class="catalog__item">
-                                <div class="catalog__item--body">
-                                    <a href="#">
-                                        <div class="catalog__item--image">
-                                            <img src="/img/catalog/d4616cb3f6d06774278b0d11f96f52c3 1.jpg" alt="">
-                                        </div>
-                                        <!-- <div class="catalog__item--button catalog__item--addBasket">
-                                    <button class="btn btn__main--white">В корзину</button>
-                                </div> -->
-                                        <div class="catalog__item--favorite">
-                                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.1339 4.02526C15.6246 3.56348 16.0293 3.14514 16.4726 2.77105C21.1072 -1.13638 28.1619 1.36158 29.2528 7.31806C29.7186 9.86349 29.0251 12.1241 27.3019 14.0613C27.1884 14.1885 27.0661 14.3083 26.9463 14.429C23.2552 18.12 19.5642 21.8102 15.8732 25.5005C15.3543 26.0194 15.0196 26.0194 14.5007 25.4989C10.7928 21.7829 7.08248 18.0685 3.37698 14.3502C0.269211 11.2335 0.18313 6.45484 3.17103 3.29478C6.05836 0.242526 11.0688 0.092085 14.1443 2.97298C14.4879 3.29478 14.7912 3.65922 15.1331 4.02446L15.1339 4.02526Z"
-                                                    fill="none" stroke="white" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="catalog__item--name">
-                                    Трикотажные брюки прямые
-                                    Трикотажные брюки прямые
-                                    (Адаптивность разных названий)
-                                </div>
-                                <div class="catalog__item--bottom">
-                                    <div class="catalog__item--prices">
-                                        <div class="catalog__item--price">
-                                            4 000 р.
-                                        </div>
-                                    </div>
-                                    <div class="catalog__item--stickers">
-                                        <div class="catalog__item--sticker catalog__item--sticker__new">
-                                            NEW
-                                        </div>
-                                        <div class="catalog__item--sticker catalog__item--sticker__sale">
-                                            SALE
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-6">
+                    <div class="catalog__element--info">
+                        <div class="catalog__element--info__head">
+                            <div class="catalog__element--info__stickers">
+                                <div class="catalog__item--sticker catalog__item--sticker__new">
+                                    NEW
+                                </div>
+                                <div class="catalog__item--sticker catalog__item--sticker__sale">
+                                    SALE
+                                </div>
+                            </div>
+                            <div class="catalog__element--info__title">
+                                <h1>Платье комбинация миди на бретельках</h1>
+                            </div>
+                            <div class="catalog__element--info__subtitle">
+                                АРТИКУЛ.   GFGJ768
+                            </div>
+                            <div class="catalog__element--info__prices">
+                                <div class="catalog__element--info__price price__old">
+                                    4 000 р.
+                                </div>
+                                <div class="catalog__element--info__price price__discount">
+                                    3 300 р.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__element--info__body">
+                            <div class="catalog__element--info__sku">
+                                <div class="catalog__element--info__sku--property">
+                                    <div class="catalog__element--info__sku--property__title">
+                                        Цвет
+                                    </div>
+                                    <div class="catalog__element--info__sku--property__properties">
+                                        <button class="catalog__element--info__sku--property__item active">Изумрудный</button>
+                                        <button class="catalog__element--info__sku--property__item">Черный</button>
+                                        <button class="catalog__element--info__sku--property__item">Белый</button>
+                                    </div>  
+                                </div>
+                                <div class="catalog__element--info__sku--property">
+                                    <div class="catalog__element--info__sku--property__title">
+                                        Размер
+                                    </div>
+                                    <div class="catalog__element--info__sku--property__properties">
+                                        <button class="catalog__element--info__sku--property__item active">40</button>
+                                        <button class="catalog__element--info__sku--property__item">42</button>
+                                        <button class="catalog__element--info__sku--property__item">44</button>
+                                        <button class="catalog__element--info__sku--property__item">46</button>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="catalog__element--info__basket">
+
+                            </div>
+                        </div>
+                        <div class="catalog__element--info__tabs">
+
+                        </div>
+                    </div>
                 </div>
-                <div class="section__link"><a href="#" class="btn btn__main--black btn__main--black__bg">Показать еще</a></div>
+                </div>
             </div>
         </div>
-        <!-- END section NEW-->
-        <div class="pager">
-            <div class="container">
-            <div class="row pager__items">
-                <div class="pager__item pager__item--prev">
-                    <a href="#">
-                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989594 6.3033 0.6967C6.01041 0.403807 5.53553 0.403807 5.24264 0.696701L0.46967 5.46967ZM21 5.25L1 5.25L1 6.75L21 6.75L21 5.25Z" fill="#6B6364"/>
-                    </svg>
-                </a>
-                </div>
-                <div class="pager__item">
-                    <a href="#">1</a>
-                </div>
-                <div class="pager__item active">
-                    <a href="#">
-                    2
-                </a>
-                </div>
-                <div class="pager__item">
-                    <a href="#">
-                    3</a>
-                </div>
-                <div class="pager__item">
-                    <a href="#">
-                    4
-                </a>
-                </div>
-                <div class="pager__item pager__item--next">
-                    <a href="#">
-                    <svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.5303 5.46967C20.8232 5.76256 20.8232 6.23744 20.5303 6.53033L15.7574 11.3033C15.4645 11.5962 14.9896 11.5962 14.6967 11.3033C14.4038 11.0104 14.4038 10.5355 14.6967 10.2426L18.9393 6L14.6967 1.75736C14.4038 1.46447 14.4038 0.989594 14.6967 0.6967C14.9896 0.403807 15.4645 0.403807 15.7574 0.696701L20.5303 5.46967ZM6.55671e-08 5.25L20 5.25L20 6.75L-6.55671e-08 6.75L6.55671e-08 5.25Z" fill="#6B6364"/>
-                    </svg>
-                </a>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="container">
-        <section class="catalog__description">
-            <div class="catalog__description--title">
-                <h2>Женские платья MI FI TI</h2>
-            </div>
-            <div class="catalog__description--subtitle">
-                <p>Интернет-магазин женской одежды MI FI TI отслеживает последние тенденции из мира моды: наши дизайнеры создают актуальные модели с учетом главных сезонных трендов. В нашем каталоге — стильная женская одежда собственного бренда MI FI TI — одежда и аксессуары созданные из натуральных материалов. MI FI TI – ультрамодные модели из современных и vegan-friendly материалов, которые отвечают последним трендам.</p>
-            </div>
-        </section>
-    </div>
     </main>
     <div class="overlay__blur"></div>
     <!--Footer-->
@@ -1439,14 +1012,17 @@
         <div class="footer__bottom">
             <div class="container">
                 <div class="row footer__bottom--items">
-                    <div class="footer__bottom--item footer__bottom--left col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div
+                        class="footer__bottom--item footer__bottom--left col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <span>© MI FI TI женская одежда - 2020 - 2023</span>
                     </div>
-                    <div class="footer__bottom--item footer__bottom--middle col-xl-7 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div
+                        class="footer__bottom--item footer__bottom--middle col-xl-7 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <a href="#"><span>Политика конфиденциальности</span></a>
                         <a href="#"><span>Уведомление об использовании Cookie файлов</span></a>
                     </div>
-                    <div class="footer__bottom--item footer__bottom--right col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div
+                        class="footer__bottom--item footer__bottom--right col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <a href="#"><span>Создано в CUBE agency</span></a>
                     </div>
                 </div>

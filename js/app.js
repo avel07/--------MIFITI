@@ -1,25 +1,28 @@
 const body = document.body;
-const core = function () {
+const app = function () {
     return {
         init: () => {
             // Тут подключаются функции
-                core.Submenu(),
-                core.MobMenu(),
-                // core.FixedHeader(),
-                core.Basket(),
-                core.Personal(),
-                core.Search(),
-                core.ClickOutside(),
-                core.AuthForm(),
-                core.RegForm(),
-                core.PassForm(),
-                core.SearchForm(),
-                core.ReadMore(),
-                core.addFavorite(),
-                core.Filters(),
-                core.ChangeSku(),
-                core.Scrolled(),
-                core.Collapse()
+                app.Submenu(),
+                app.MobMenu(),
+                // app.FixedHeader(),
+                app.Basket(),
+                app.AddBasket(),
+                app.Personal(),
+                app.Search(),
+                app.ClickOutside(),
+                app.AuthForm(),
+                app.RegForm(),
+                app.PassForm(),
+                app.SearchForm(),
+                app.ReadMore(),
+                app.addFavorite(),
+                app.Filters(),
+                app.ChangeSku(),
+                app.ChangeQuantity(),
+                app.Scrolled(),
+                app.ScrolltoObject(),
+                app.Collapse()
         },
         // Показать BackGround
         BackgroundShow: () => {
@@ -32,7 +35,7 @@ const core = function () {
         // FixedHeader: () => {
         //     header = document.querySelector('header');
 
-        //     window.addEventListener('scroll', core.Throttle(() => {
+        //     window.addEventListener('scroll', app.Throttle(() => {
         //         window.scrollY > 500 
 
         //     }, 300))
@@ -42,10 +45,10 @@ const core = function () {
             let items = Array.from(document.querySelectorAll(".header__submenu")).map(i => i.parentNode);
             for (i = 0; i < items.length; i++) {
                 items[i].addEventListener('mouseenter', () => {
-                    core.BackgroundShow();
+                    app.BackgroundShow();
                 })
                 items[i].addEventListener('mouseleave', () => {
-                    core.BackgroundHide();
+                    app.BackgroundHide();
                 })
             }
         },
@@ -53,69 +56,69 @@ const core = function () {
         MobMenu: () => {
             let item__open = document.querySelector('.header__panel__mobile--navbar');
             let item__close = document.querySelector('.header__menu--mob__close');
-                item__open.addEventListener('click', core.MobMenuOpen);
-                item__close.addEventListener('click', core.MobMenuClose);
+                item__open.addEventListener('click', app.MobMenuOpen);
+                item__close.addEventListener('click', app.MobMenuClose);
         },
         // Открываем мобильное меню
         MobMenuOpen: () => {
             body.classList.add('show__navbar');
-            core.LockScreen();
+            app.LockScreen();
         },
         // Закрываем мобильное меню
         MobMenuClose: () => {
             body.classList.remove('show__navbar');
-            core.UnlockScreen();
+            app.UnlockScreen();
         },
         // Работа с корзиной
         Basket: () => {
             let item__open = document.querySelector('.header__panel__basket');
             let item__close = document.querySelector('.header__basket--close');
-                item__open.addEventListener('click', core.BasketOpen);
-                item__close.addEventListener('click', core.BasketClose);
+                item__open.addEventListener('click', app.BasketOpen);
+                item__close.addEventListener('click', app.BasketClose);
         },
         // Открываем корзину
         BasketOpen: () => {
             body.classList.add('show__basket');
-            core.LockScreen();
+            app.LockScreen();
         },
         // Закрываем корзину
         BasketClose: () => {
             body.classList.remove('show__basket');
-            core.UnlockScreen();
+            app.UnlockScreen();
         },
         // Работа с пользователем.
         Personal: () => {
             let item__open = document.querySelector('.header__panel__personal');
             let item__close = document.querySelector('.header__personal--close');
-                item__open.addEventListener('click', core.PersonalOpen);
-                item__close.addEventListener('click', core.PersonalClose);
+                item__open.addEventListener('click', app.PersonalOpen);
+                item__close.addEventListener('click', app.PersonalClose);
         },
         // Открываем пользователя.
         PersonalOpen: () => {
             body.classList.add('show__personal');
-            core.LockScreen();
+            app.LockScreen();
         },
         // Закрываем пользователя.
         PersonalClose: () => {
             body.classList.remove('show__personal');
-            core.UnlockScreen();
+            app.UnlockScreen();
         },
         // Работа с поиском
         Search: () => {
             let item__open = document.querySelector('.header__panel__search');
             let item__close = document.querySelector('.header__search--close');
-                item__open.addEventListener('click', core.SearchOpen);
-                item__close.addEventListener('click', core.SearchClose);
+                item__open.addEventListener('click', app.SearchOpen);
+                item__close.addEventListener('click', app.SearchClose);
         },
         // Открываем поиск
         SearchOpen: () => {
             body.classList.add('show__search')
-            core.LockScreen();
+            app.LockScreen();
         },
         // Закрываем поиск
         SearchClose: () => {
             body.classList.remove('show__search');
-            core.UnlockScreen();
+            app.UnlockScreen();
         },
         // Блочим скролл 
         LockScreen: () => {
@@ -131,10 +134,10 @@ const core = function () {
         ClickOutside: () => {
             let overlay = document.querySelector('.overlay__blur');
             overlay.addEventListener('click', () => {
-                core.MobMenuClose();
-                core.BasketClose();
-                core.PersonalClose();
-                core.SearchClose();
+                app.MobMenuClose();
+                app.BasketClose();
+                app.PersonalClose();
+                app.SearchClose();
             })
         },
         // Форма аутентификации
@@ -142,7 +145,7 @@ const core = function () {
             let button = document.querySelector('button[type="submit"].header__personal--auth__submit');
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                if (core.FormControl(e.target)) {
+                if (app.FormControl(e.target)) {
                     console.log('Отправляем форму Auth')
                 }
             })
@@ -152,7 +155,7 @@ const core = function () {
             let button = document.querySelector('button[type="submit"].header__personal--reg__submit');
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                if (core.FormControl(e.target)) {
+                if (app.FormControl(e.target)) {
                     console.log('Отправляем форму Reg')
                 }
             })
@@ -162,7 +165,7 @@ const core = function () {
             let button = document.querySelector('button[type="submit"].header__personal--pass__submit');
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                if (core.FormControl(e.target)) {
+                if (app.FormControl(e.target)) {
                     console.log('Отправляем форму Pass')
                 }
             })
@@ -172,25 +175,26 @@ const core = function () {
             let button = document.querySelector('button[type="submit"].header__search__submit');
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                if (core.FormControl(e.target)) {
+                if (app.FormControl(e.target)) {
                     console.log('Отправляем форму Search')
                 }
             })
         },
         // Добавить товар в избранное
         addFavorite: () => {
-            let buttons = document.querySelectorAll('.catalog__item--favorite');
+            let buttons = document.querySelectorAll('[data-favorite]');
             for(i=0;i<buttons.length;i++){
                 let button = buttons[i];
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
+                    let id = button.dataset.favorite
                     if(!button.classList.contains('active')){
                         button.classList.add('active');
-                        console.log('Отправляем в фавориты');
+                        console.log('Отправляем в фавориты товар с ID - ' + id);
                     }
                     else{
                         button.classList.remove('active');
-                        console.log('Убираем из фаворитов');
+                        console.log('Убираем из фаворитов товар с ID - ' + id);
                     }
                 })
             }
@@ -284,7 +288,7 @@ const core = function () {
                     if(open__filter){
                         open__filter.addEventListener('click', () =>{
                             body.classList.add('show__filter');
-                            core.LockScreen();
+                            app.LockScreen();
                         })
                     }
                     if(close__filter){
@@ -296,7 +300,7 @@ const core = function () {
                                 }
                             }
                             body.classList.remove('show__filter');
-                            core.UnlockScreen();
+                            app.UnlockScreen();
                         })
                     }
             },
@@ -319,6 +323,45 @@ const core = function () {
                 })
             }
         },
+        ChangeQuantity: () => {
+            let minus = document.querySelectorAll('.quantity__minus');
+            let plus = document.querySelectorAll('.quantity__plus');
+            let input = document.querySelectorAll('.quantity__input');
+            if(plus && minus){
+                for(i=0;i<minus.length;i++){
+                    minus[i].addEventListener('click', (e) => {
+                        let input = e.target.nextElementSibling
+                        let count = parseInt(input.value) - 1
+                        count = count < 1 ? 1 : count
+                        input.value = count;
+                        input.dispatchEvent(new Event('change'));
+                    })
+                    plus[i].addEventListener('click', (e) => {
+                        let input = e.target.previousElementSibling
+                        let count = parseInt(input.value) + 1
+                        input.value = count
+                        input.dispatchEvent(new Event('change'));
+                    })
+                    input[i].addEventListener('change', function() {
+                        let id = this.dataset.quantity
+                        let basket = document.querySelector(`[data-basket="${id}"]`)
+                        basket.dataset.quantity = this.value;
+                        console.log(`Отправили в кнопку корзины товара в количестве ${this.value} шт.`)
+                    })
+                }
+            }
+        },
+        AddBasket: () => {
+            let items = document.querySelectorAll('[data-basket]');
+            for(i=0;i<items.length;i++){
+                let item = items[i]
+                item.addEventListener('click', () => {
+                    let id = item.dataset.basket;
+                    let quantity = item.dataset.quantity;
+                    console.log(`Добавляем в корзину товар ID = ${id} с количеством - ${quantity}`)
+                })
+            }
+        },
         // Проверим, мобилка ли
         IsMobile: () => {
             let check = false;
@@ -335,7 +378,8 @@ const core = function () {
             return this.scrollHeight - this.scrollTop === this.clientHeight
         }
         if(items.length > 0){ 
-            let observer = new ResizeObserver(core.Throttle((entries) => {
+            // Динамичный ResizeObserver для Корзины
+            let observer = new ResizeObserver(app.Throttle((entries) => {
                 if(entries){
                 for (let entry of entries) {
                     let position = entry.target.dataset.scrolled;
@@ -351,7 +395,7 @@ const core = function () {
             for(i=0;i<items.length;i++){
                 let item = items[i];
                 observer.observe(item);
-                item.addEventListener('scroll', core.Throttle(function(){
+                item.addEventListener('scroll', app.Throttle(function(){
                     let position = item.dataset.scrolled
                     if (item.isScrolled()) {
                         item.nextElementSibling.dataset.scroll = ''
@@ -362,6 +406,28 @@ const core = function () {
                 }, 300))
             }
         }
+        },
+        ScrolltoObject: () => {
+            let items = document.querySelectorAll('[data-scroll]');
+            for(i=0;i<items.length;i++){
+                let item = items[i];
+                item.addEventListener('click', (e) => {
+                    let link = item.dataset.scroll;
+                    if(link === 'this'){
+                        e.target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                    else{
+                        document.querySelector(link).scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+
+                })
+            }
         },
         // Игнорирует вызовы передаваемой функции пока не пройдет определенное ожидание
         Throttle:(func, ms) => {
@@ -419,7 +485,7 @@ const core = function () {
 }();
 
 document.addEventListener('DOMContentLoaded', () => {
-    core.init();
+    app.init();
 })
 
 // HomeSlider
@@ -448,17 +514,39 @@ const homeSection = new Swiper('.catalog__section .swiper', {
       }
 });
 
-// const catalogElementsThumbs = new Swiper('.catalog__element--gallery__thumbs .swiper', {
-//     direction: 'vertical',
-//     slidesPerView: 5,
-//     spaceBetween: 4,
-//     watchSlidesVisibility: true,
-//     watchSlidesProgress: true,
-// });
+const catalogElementsThumbs = new Swiper('.catalog__element--gallery__thumbs .swiper', {
+    direction: 'vertical',
+    slidesPerView: 5,
+    spaceBetween: 4,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+});
 
 const catalogElements = new Swiper('.catalog__element--gallery__images .swiper', {
-    slidesPerView : 1
+    slidesPerView : 1,
+    thumbs: {
+        swiper: catalogElementsThumbs,
+        slideThumbActiveClass: 'active',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    }
 }) ;
+
+// var swiper = new Swiper(".mySwiper", {
+//     spaceBetween: 10,
+//     slidesPerView: 4,
+//     freeMode: true,
+//     watchSlidesProgress: true,
+//   });
+//   var swiper2 = new Swiper(".mySwiper2", {
+//     spaceBetween: 10,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+
+//   });
 
 // // ScreenLock Для iPhone, но надо потестировать.
 // let screen__lock = false;

@@ -732,8 +732,7 @@
             </div>
         </div>
     </aside>
-    <main>
-        <div class="content__wrap">
+    <main class="content__wrap">
         <!-- Breadcrumbs -->
         <div class="breadcrumbs">
             <div class="container">
@@ -744,208 +743,125 @@
                         </a>
                     </div>
                     <div class="breadcrumbs__item">
-                        <a class="breadcrumbs__item--link" href="#">
-                            Каталог
-                        </a>
-                    </div>
-                    <div class="breadcrumbs__item">
-                        <a class="breadcrumbs__item--link" href="#">
-                            Платья
-                        </a>
-                    </div>
-                    <div class="breadcrumbs__item">
-                        Платье комбинация на бретельках
+                        Оформление заказа
                     </div>
                 </div>
             </div>
         </div>
-        <div class="link__back">
+        <div class="page__title">
             <div class="container">
-                <a href="#">
-                    <div class="row">
-                        <div class="link__back--icon">
-                            <svg width="21" height="12" viewBox="0 0 21 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M0.469669 5.46967C0.176777 5.76256 0.176777 6.23744 0.469669 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989594 6.3033 0.6967C6.01041 0.403807 5.53553 0.403807 5.24264 0.696701L0.469669 5.46967ZM21 5.25L1 5.25L1 6.75L21 6.75L21 5.25Z"
-                                    fill="#1D1D1D" />
-                            </svg>
-                        </div>
-                        <div class="link__back--title">Назад</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="catalog">
-            <div class="container container__nopadding-sm">
-                <div class="catalog__element row">
-                    <div class="left__sticky col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                        <div class="catalog__element--gallery">
-                            <div class="catalog__element--gallery__thumbs">
-                                <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide catalog__element--gallery__thumb">
-                                        <img src="/img/element__thumb.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__thumb">
-                                        <img src="/img/element__thumb.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__thumb">
-                                        <img src="/img/element__thumb.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__thumb">
-                                        <img src="/img/element__thumb.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__thumb">
-                                        <img src="/img/element__thumb.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__thumb">
-                                        <img src="/img/element__thumb.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                                <!-- <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div> -->
-                            </div>
-                            <div class="catalog__element--gallery__images">
-                                <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide catalog__element--gallery__image">
-                                        <img src="/img/element.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__image">
-                                            <img src="/img/element.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__image">
-                                            <img src="/img/element.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__image">
-                                            <img src="/img/element.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__image">
-                                            <img src="/img/element.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide catalog__element--gallery__image">
-                                            <img src="/img/element.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                    <div class="catalog__element--info">
-                        <div class="catalog__element--info__head">
-                            <div class="catalog__element--info__stickers">
-                                <div class="catalog__item--sticker catalog__item--sticker__new">
-                                    NEW
-                                </div>
-                                <div class="catalog__item--sticker catalog__item--sticker__sale">
-                                    SALE
-                                </div>
-                            </div>
-                            <div class="catalog__element--info__title">
-                                <h1>Платье комбинация миди на бретельках</h1>
-                            </div>
-                            <div class="catalog__element--info__subtitle">
-                                АРТИКУЛ.   GFGJ768
-                            </div>
-                            <div class="catalog__element--info__prices">
-                                <div class="catalog__element--info__price price__old">
-                                    4 000 р.
-                                </div>
-                                <div class="catalog__element--info__price price__discount">
-                                    3 300 р.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="catalog__element--info__body">
-                            <div class="catalog__element--info__sku">
-                                <div class="catalog__element--info__sku--property">
-                                    <div class="catalog__element--info__sku--property__title">
-                                        Цвет
-                                    </div>
-                                    <div class="catalog__element--info__sku--property__properties">
-                                        <button type="button" class="catalog__element--info__sku--property__item active">Изумрудный</button>
-                                        <button type="button" class="catalog__element--info__sku--property__item">Черный</button>
-                                        <button type="button" class="catalog__element--info__sku--property__item">Белый</button>
-                                    </div>  
-                                </div>
-                                <div class="catalog__element--info__sku--property">
-                                    <div class="catalog__element--info__sku--property__title">
-                                        Размер
-                                    </div>
-                                    <div class="catalog__element--info__sku--property__properties">
-                                        <button type="button" class="catalog__element--info__sku--property__item active">40</button>
-                                        <button type="button" class="catalog__element--info__sku--property__item">42</button>
-                                        <button type="button" class="catalog__element--info__sku--property__item">44</button>
-                                        <button type="button" class="catalog__element--info__sku--property__item">46</button>
-                                    </div>  
-                                </div>
-                            </div>
-                            <div class="catalog__element--info__basket">
-                                <div class="catalog__element--info__basket--quantity">
-                                    <button type="button" class="quantity__minus">
-                                        -
-                                    </button>
-                                    <input type="text" class="quantity__input" data-quantity="2" readonly value="1">
-                                    <button type="button" class="quantity__plus">
-                                        +
-                                    </button>
-                                </div>
-                                <div class="catalog__element--info__basket--add">
-                                    <button type="button" class="btn basket__item--add" data-basket="2" data-quantity="1">В корзину</button>
-                                </div>
-                                <div class="catalog__element--info__basket--favorite" data-favorite="2">
-                                    <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M15.1339 4.02526C15.6246 3.56348 16.0293 3.14514 16.4726 2.77105C21.1072 -1.13638 28.1619 1.36158 29.2528 7.31806C29.7186 9.86349 29.0251 12.1241 27.3019 14.0613C27.1884 14.1885 27.0661 14.3083 26.9463 14.429C23.2552 18.12 19.5642 21.8102 15.8732 25.5005C15.3543 26.0194 15.0196 26.0194 14.5007 25.4989C10.7928 21.7829 7.08248 18.0685 3.37698 14.3502C0.269211 11.2335 0.18313 6.45484 3.17103 3.29478C6.05836 0.242526 11.0688 0.092085 14.1443 2.97298C14.4879 3.29478 14.7912 3.65922 15.1331 4.02446L15.1339 4.02526Z"
-                                        fill="none" stroke="white" />
-                                </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="catalog__element--info__tabs">
-                            <div class="catalog__element--info__tabs--titles">
-                                <div class="catalog__element--info__tabs--title active" data-scroll="this" data-tab="title">
-                                    Описание
-                                </div>
-                                <div class="catalog__element--info__tabs--title" data-scroll="this" data-tab="title">
-                                    Характеристики
-                                </div>
-                                <div class="catalog__element--info__tabs--title" data-scroll="this" data-tab="title">
-                                    Доставка и оплата
-                                </div>
-                            </div>
-                            <div class="catalog__element--info__tabs--bodies">
-                                <div class="catalog__element--info__tabs--body show" data-tab="body">
-                                    Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом.
-                                    длина миди
-                                    прилегающий силуэт
-                                    фигурный вырез
-                                    регулируемые бретели
-                                    прямая юбка с разрезом
-                                    шнуровка на спинке
-                                </div>
-                                <div class="catalog__element--info__tabs--body" data-tab="body">
-                                   Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
-                                   Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
-                                   Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
-                                </div>
-                                <div class="catalog__element--info__tabs--body" data-tab="body">
-                                    Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
-                                    Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="row">
+                    <h1>Оформление заказа</h1>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="ordering">
+            <div class="container">
+                <form class="ordering__sections">
+                <div class="ordering__section">
+                    <div class="ordering__section--title">
+                        1. Персональные данные
+                    </div>
+                    <div class="ordering__section--body">
+                        <div class="form__block">
+                            <label class="form__label" for="personal__name">Имя*</label>
+                            <input class="form__input" type="text" id="personal__name"
+                                aria-required required name="personal__name">
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="personal__secondName">Фамилия*</label>
+                            <input class="form__input" type="text" id="personal__secondName"
+                                aria-required required name="personal__secondName">
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="personal__phone">Телефон*</label>
+                            <input class="form__input" type="tel" data-mask="phone" id="personal__phone"
+                                aria-required placeholder="+7(___)___-__-__" required name="personal__phone">
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="personal__email">Эл. Адрес</label>
+                            <input class="form__input" type="email" id="personal__email"
+                                required name="personal__email">
+                        </div>
+                    </div>
+                </div>
+                <div class="ordering__section">
+                    <div class="ordering__section--title">
+                        2. Адрес доставки
+                    </div>
+                    <div class="ordering__section--body">
+                        <div class="form__block">
+                            <label class="form__label" for="personal__address">Адрес*</label>
+                            <input class="form__input" type="text" id="personal__address"
+                                aria-required required name="personal__address">
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="personal__index">Индекс*</label>
+                            <input class="form__input" type="text" id="personal__index"
+                                aria-required required name="personal__index">
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ordering__section">
+                    <div class="ordering__section--title">
+                        3. Способ доставки
+                    </div>
+                    <div class="ordering__section--body">
+                        <div class="form__block">
+                            <label class="form__label" for="personal__delivery--post">Почта России</label>
+                            <input class="form__input" type="radio" id="personal__delivery--post" name="delivery__method"
+                                aria-required required>
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="personal__delivery--sdek">СДЭК</label>
+                            <input class="form__input" type="radio" id="personal__delivery--sdek" name="delivery__method"
+                                aria-required required>
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="personal__delivery--punkt">Адрес пункта выдачи</label>
+                            <select name="cars" id="personal__delivery--punkt">
+                                <option value="one">Пункт один</option>
+                                <option value="two">Пункт два</option>
+                                <option value="three">Пункт три</option>
+                                <option value="four">Пункт четыре</option>
+                              </select>
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ordering__section">
+                    <div class="ordering__section--title">
+                        4. Способ оплаты
+                    </div>
+                    <div class="ordering__section--body">
+                        <div class="form__block">
+                            <label class="form__label" for="personal__payment--card">Картой на сайте</label>
+                            <input class="form__input" type="radio" id="personal__payment--card" name="personal__payment"
+                                aria-required required>
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                        <div class="form__block">
+                            <label class="form__label" for="personal__payment--receipt">При получении</label>
+                            <input class="form__input" type="radio" id="personal__payment--receipt" name="personal__payment"
+                                aria-required required>
+                            <span class="form__error">Заполните обязательные поля</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Оформить заказ</button>
+            </form>
+            <div class="ordering__basket">
+
+            </div>
+            </div>
+        </div>
     </main>
     <div class="overlay__blur"></div>
     <!--Footer-->

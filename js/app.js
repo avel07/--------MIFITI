@@ -16,6 +16,7 @@ const app = function () {
                 app.PassForm(),
                 app.SearchForm(),
                 app.OrderForm(),
+                app.ReturnForm(),
                 app.ReadMore(),
                 app.addFavorite(),
                 app.Filters(),
@@ -167,7 +168,7 @@ const app = function () {
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
                     if (app.FormControl(e.target)) {
-                        alert('Отправляем форму Auth')
+                        console.log('Отправляем форму Auth')
                     }
                 })
             }
@@ -179,7 +180,7 @@ const app = function () {
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
                     if (app.FormControl(e.target)) {
-                        alert('Отправляем форму Reg')
+                        console.log('Отправляем форму Reg')
                     }
                 })
             }
@@ -191,7 +192,7 @@ const app = function () {
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
                     if (app.FormControl(e.target)) {
-                        alert('Отправляем форму Pass')
+                        console.log('Отправляем форму Pass')
                     }
                 })
             }
@@ -203,18 +204,29 @@ const app = function () {
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
                     if (app.FormControl(e.target)) {
-                        alert('Отправляем форму Search')
+                        console.log('Отправляем форму Search')
                     }
                 })
             }
         },
         OrderForm: () => {
-            let button = document.querySelector('button[type="submit"]#order__submit');
+            let button = document.querySelector('button[type="submit"].order__submit');
             if(button){
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
                     if (app.FormControl(e.target)) {
-                        alert('Отправляем заказ!')
+                        console.log('Отправляем заказ!')
+                    }
+                })
+            }
+        },
+        ReturnForm: () => {
+            let button = document.querySelector('button[type="submit"].return__submit');
+            if(button){
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (app.FormControl(e.target)) {
+                        console.log('Отправляем запрос на возврат!')
                     }
                 })
             }
@@ -229,11 +241,11 @@ const app = function () {
                     let id = button.dataset.favorite
                     if (!button.classList.contains('active')) {
                         button.classList.add('active');
-                        alert('Отправляем в фавориты товар с ID - ' + id);
+                        console.log('Отправляем в фавориты товар с ID - ' + id);
                     }
                     else {
                         button.classList.remove('active');
-                        alert('Убираем из фаворитов товар с ID - ' + id);
+                        console.log('Убираем из фаворитов товар с ID - ' + id);
                     }
                 })
             }
@@ -368,7 +380,7 @@ const app = function () {
                             }
                             e.target.classList.add('active');
                         }
-                        alert('Получаем данные об этом ТП - ' + e.target.textContent);
+                        console.log('Получаем данные об этом ТП - ' + e.target.textContent);
                     }
                 })
             }
@@ -396,7 +408,7 @@ const app = function () {
                         let id = this.dataset.quantity
                         let basket = document.querySelector(`[data-basket="${id}"]`)
                         basket.dataset.quantity = this.value;
-                        alert(`Отправили в кнопку корзины товара в количестве ${this.value} шт.`)
+                        console.log(`Отправили в кнопку корзины товара в количестве ${this.value} шт.`)
                     })
                 }
             }
@@ -408,7 +420,7 @@ const app = function () {
                 item.addEventListener('click', () => {
                     let id = item.dataset.basket;
                     let quantity = item.dataset.quantity;
-                    alert(`Добавляем в корзину товар ID = ${id} с количеством - ${quantity}`)
+                    console.log(`Добавляем в корзину товар ID = ${id} с количеством - ${quantity}`)
                 })
             }
         },
@@ -599,7 +611,8 @@ const catalogElements = new Swiper('.catalog__element--gallery__images .swiper',
     },
     pagination: {
         el: '.swiper-pagination',
-    }
+    },
+    navigation: { prevEl: '.catalog__element--gallery__prev', nextEl: '.catalog__element--gallery__next', disabledClass: 'disabled' },
 });
 
 // var swiper = new Swiper(".mySwiper", {

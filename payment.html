@@ -754,7 +754,7 @@
                             </a>
                         </div>
                         <div class="breadcrumbs__item">
-                            Заявление на возврат
+                            Оплата
                         </div>
                     </div>
                 </div>
@@ -762,75 +762,38 @@
             <div class="page__title">
                 <div class="container">
                     <div class="row">
-                        <h1>Заявление на возврат</h1>
+                        <h1>Оплата</h1>
                     </div>
                 </div>
             </div>
-            <div class="return">
-            <div class="container">
-                <div class="return__row">
-                        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-                    <form class="return__sections">
-                    <div class="return__section">
-                        <div class="return__section--title">
-                            Заполните форму
+            <div class="payment">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="payment__info">
+                                <p>
+                                Оформляя заказ на нашем сайте, вы можете осуществить оплату с помощью банковской карты.<br>
+                                <br>
+                                Для оплаты банковской картой онлайн вы будете перенаправлены на платежный шлюз ПАО "Сбербанк России", где сможете указать реквизиты карты. Соединение с платежным шлюзом и передача информации осуществляется в защищенном режиме с использованием протокола шифрования SSL.
+                                Если Банк-Эмитент Вашей карты поддерживает технологию безопасного проведения интернет-платежей Verified By VISA или Master Card Secure Code, будьте готовы указать специальный пароль, необходимый для успешной оплаты. Способы и возможность получения пароля для совершения интернет-платежа вы можете уточнить в банке, выпустившем карту.<br>
+                                <br>
+                                <b>Реквизиты, необходимые для оплаты: </b><br>
+                                <br>
+                                - номер карты;<br>
+                                - срок действия карты;<br>
+                                - имя владельца карты;<br>
+                                - CVV2- или CVC2-код карты (указан на обратной стороне банковской карты).<br>
+                            </p>
+                            </div>
                         </div>
-                        <div class="return__section--body">
-                            <div class="form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                <label class="form__label" for="personal__name">Имя*</label>
-                                <input class="form__input" type="text" id="personal__name" aria-required="" required="" name="personal__name">
-                                <span class="form__error">Заполните обязательные поля</span>
-                            </div>
-                            <div class="form__block form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                <label class="form__label" for="personal__secondName">Фамилия*</label>
-                                <input class="form__input" type="text" id="personal__secondName" aria-required="" required="" name="personal__secondName">
-                                <span class="form__error">Заполните обязательные поля</span>
-                            </div>
-                            <div class="form__block form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                <label class="form__label" for="personal__phone">Телефон*</label>
-                                <input class="form__input" type="tel" data-mask="phone" id="personal__phone" aria-required="" placeholder="+7(___)___-__-__" required="" name="personal__phone">
-                                <span class="form__error">Заполните обязательные поля</span>
-                            </div>
-                            <div class="form__block form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                <label class="form__label" for="personal__email">Эл. Адрес</label>
-                                <input class="form__input" type="email" id="personal__email" required="" name="personal__email">
-                            </div>
-                            <div class="form__block form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                <label class="form__label" for="order__number">Номер заказа</label>
-                                <input class="form__input" type="text" id="order__number" required="" aria-required="" name="order__number">
-                                <span class="form__error">Заполните обязательные поля</span>
-                            </div>
-                            <div class="form__block form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                <label class="form__label" for="reason__return">Причина возврата</label>
-                                <input class="form__input" type="text" id="reason__return" required="" aria-required="" name="reason__return">
-                                <span class="form__error">Заполните обязательные поля</span>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="payment__image">
+                                <img src="/img/payment.jpg" alt="">
                             </div>
                         </div>
                     </div>
-                            <div class="form__block user__agreement">
-                                <input class="form__input" type="checkbox" id="order__agreement" aria-required="" required="">
-                                <label class="form__label" for="order__agreement">Я разрешаю MI FI TI использовать мои личные данные в соответствии с пользовательским соглашением</label>
-                                <span class="form__error">Примите пользовательское соглашение</span>
-                            </div>
-                    <button type="submit" id="return__submit" class="btn btn__main--black btn__main--black__bg return__submit">Отправить запрос</button>
-                </form>
-            </div>
-            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                <div class="return__info">
-                    <p>
-                Вернуть или обменять товар, не подошедший Вам по каким-либо причинам (фасон, размер, цвет) в течение 7 календарных дней с момента получения заказа.
-                    <br>
-                    <br>
-                1. Заполнить электронную форму;<br>
-                2. Ожидать звонка оператора для уточнения деталей, связанных с возвратом;<br>
-                3. Заполнить отрывной бланк, полученный вместе с заказом, и вложить его в отправляемую посылку;<br>
-                4. Обратиться в ближайший офис СДЭК или Почты России (в зависимости от региона) для отправки товара на адрес распределительного центра. При отправке Почтой России потребуется приобрести упаковочный пакет.<br>
-            </p>
-            </div>
-            </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
     <div class="arrow__top" data-scroll="body">

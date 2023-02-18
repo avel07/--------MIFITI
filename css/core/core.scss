@@ -1387,7 +1387,22 @@ body {
         margin: rem(15) 0;
     }
 }
-
+p{
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+a{
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    transition: color .15s linear;
+    &:hover{
+        @include color(color, brown);
+    }
+}
 .section {
     &__title {
         text-align: center;
@@ -1804,7 +1819,60 @@ body {
             @include media('max', 'sm') {
                 margin: 0 rem(-15px);
             }
-
+            &__prev{
+                position: absolute;
+                top: 10px;
+                transform: translate(-50%);
+                left: 50%;
+                z-index: 3;
+                cursor: pointer;
+                transition:  all .25s linear;
+                opacity: 1;
+                visibility: visible;
+                &.disabled{
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                .background__gradient{
+                        transition: all .5s ease;
+                        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 15%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.8) 45%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.4) 75%, rgba(255,255,255,0.1) 90%, rgba(255,255,255,0) 100%);
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        top: 0;
+                        height: rem(70);
+                        transform: translate(-50%, -20%);
+                        width: 89px;
+                        z-index: -1;
+                }
+            }
+            &__next{
+                position: absolute;
+                bottom: 10px;
+                transform: translate(-50%);
+                left: 50%;
+                z-index: 3;
+                cursor: pointer;
+                transition:  all .25s linear;
+                opacity: 1;
+                visibility: visible;
+                &.disabled{
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                .background__gradient{
+                    transition: all .5s ease;
+                    background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0.95) 15%, rgba(255, 255, 255, 0.85) 30%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.1) 90%, rgba(255, 255, 255, 0));
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    height: rem(70);
+                    transform: translate(-50%, -60%);
+                    width: 89px;
+                    z-index: -1;
+            }
+            }
             &__thumbs {
                 flex: 0 0 auto;
                 width: 15%;
@@ -1813,7 +1881,8 @@ body {
                 @include media('max', 'lg') {
                     display: none;
                 }
-
+                &--wrapper{
+                }
                 .swiper-vertical .swiper-wrapper {
                     max-height: 791px;
 
@@ -2771,7 +2840,68 @@ body {
         }
     }
 }
-
+.return{
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        @include media('max', 'lg'){
+            flex-direction: column-reverse;
+        }
+    }
+    &__sections{
+        .return__submit{
+            margin: rem(20) 0 0;
+            @include media('max', 'sm'){
+                display: block;
+                margin: rem(20) auto;
+            }
+        }
+    }
+    &__section{
+        &--body{
+            display: flex;
+            flex-wrap: wrap;
+            margin: rem(27) 0 0 0;
+            > * {
+                padding: 0 rem(30) 0 0;
+                @include media('max', 'lg'){
+                    padding: 0;
+                }
+            }
+        }
+    }
+    &__info{
+        @include color(color, main-black);
+        @include font(300, rem(18), rem(27));
+    }
+}
+.payment__info{
+    p{
+        @include color(color, black);
+        @include font(300, rem(18), rem(27));
+        @include media('max', 'sm'){
+            @include font(300, rem(14), rem(22))
+        }
+    }
+}
+.shops{
+    &__title{
+        @include color(color, black);
+        @include font(500, rem(18), rem(27));
+        @include media('max', 'sm'){
+            @include font(500, rem(14), rem(22));
+        }
+    }
+    &__subtitle{
+        @include color(color, black);
+        @include font(300, rem(16), rem(27));
+        margin: rem(15) 0;
+        @include media('max', 'sm'){
+            @include font(500, rem(12), rem(20));
+        }
+    }
+}
 // Main delivery
 .main__delivery {
     margin: rem(50) 0 0;
@@ -2907,11 +3037,9 @@ body {
                     flex: 0 0 auto;
                     width: 50%;
                 }
-
-                @include color(color, breadcrumbs-gray);
-                @include font(400, rem(15), rem(22));
-
-                a {
+                a{
+                    @include color(color, breadcrumbs-gray);
+                    @include font(400, rem(15), rem(22));
                     transition: color .15s linear;
                 }
 

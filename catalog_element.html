@@ -29,7 +29,7 @@
                 </div>
                 <nav class="header__menu">
                     <ul class="header__menu__items">
-                        <li class="header__menu__item active">
+                        <li class="header__menu__item">
                             <a href="#">Каталог</a>
                             <div class="header__submenu">
                                 <div class="container">
@@ -669,6 +669,12 @@
                                         placeholder="" required>
                                     <span class="form__error">Заполните обязательные поля</span>
                                 </div>
+                                <div class="form__block user__agreement">
+                                    <input class="form__input" type="checkbox" id="reg__agreement" aria-required
+                                    required>
+                                    <label class="form__label" for="reg__agreement">Я разрешаю MI FI TI использовать мои личные данные в соответствии с пользовательским соглашением</label>
+                                    <span class="form__error">Примите пользовательское соглашение</span>
+                                </div>
                                 <button class="btn btn__main--black header__personal--reg__submit" type="submit">
                                     Зарегистироваться
                                 </button>
@@ -779,7 +785,7 @@
         <div class="catalog">
             <div class="container container__nopadding-sm">
                 <div class="catalog__element row">
-                    <div class="left__sticky col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="position__sticky col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="catalog__element--gallery">
                             <div class="catalog__element--gallery__thumbs">
                                 <div class="swiper">
@@ -907,20 +913,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog__element--info__tabs">
-                            <div class="catalog__element--info__tabs--titles">
-                                <div class="catalog__element--info__tabs--title active" data-scroll="this" data-tab="title">
+                        <div class="catalog__element--info__descriptions">
+                                <div class="catalog__element--info__description--title collapsed" data-toggle="collapse" data-target="next">
                                     Описание
+                                    <div class="catalog__element--info__description--title__icon">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <line x1="12.2646" y1="2.18556e-08" x2="12.2646" y2="25" stroke="#8B8486"/>
+                                            <line y1="12.7354" x2="25" y2="12.7354" stroke="#8B8486"/>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="catalog__element--info__tabs--title" data-scroll="this" data-tab="title">
-                                    Характеристики
-                                </div>
-                                <div class="catalog__element--info__tabs--title" data-scroll="this" data-tab="title">
-                                    Доставка и оплата
-                                </div>
-                            </div>
-                            <div class="catalog__element--info__tabs--bodies">
-                                <div class="catalog__element--info__tabs--body show" data-tab="body">
+                                <div class="catalog__element--info__description--body collapse show">
                                     Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом.
                                     длина миди
                                     прилегающий силуэт
@@ -929,16 +932,33 @@
                                     прямая юбка с разрезом
                                     шнуровка на спинке
                                 </div>
-                                <div class="catalog__element--info__tabs--body" data-tab="body">
-                                   Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
-                                   Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
-                                   Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
+                                <div class="catalog__element--info__description--title" data-toggle="collapse" data-target="next">
+                                    Характеристики
+                                    <div class="catalog__element--info__description--title__icon">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <line x1="12.2646" y1="2.18556e-08" x2="12.2646" y2="25" stroke="#8B8486"/>
+                                            <line y1="12.7354" x2="25" y2="12.7354" stroke="#8B8486"/>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="catalog__element--info__tabs--body" data-tab="body">
+                                <div class="catalog__element--info__description--body collapse">
+                                    Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
+                                    Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
+                                    Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
+                                 </div>
+                                <div class="catalog__element--info__description--title" data-toggle="collapse" data-target="next">
+                                    Доставка и оплата
+                                    <div class="catalog__element--info__description--title__icon">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <line x1="12.2646" y1="2.18556e-08" x2="12.2646" y2="25" stroke="#8B8486"/>
+                                            <line y1="12.7354" x2="25" y2="12.7354" stroke="#8B8486"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="catalog__element--info__description--body collapse">
                                     Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
                                     Эффектное платье длины миди прилегающего силуэта, выполненное из приятного к телу плотного материала. Модель имеет глубокий фигурный вырез на тонких бретелях, переходящих в шнуровку на спинке, а также прямую юбку с высоким боковым разрезом. длина миди прилегающий силуэт фигурный вырез регулируемые бретели прямая юбка с разрезом шнуровка на спинке
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -947,6 +967,13 @@
         </div>
     </div>
     </main>
+    <div class="arrow__top" data-scroll="body">
+        <div class="arrow__top--icon">
+            <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.53033 0.469669C6.23744 0.176777 5.76256 0.176777 5.46967 0.469669L0.696698 5.24264C0.403805 5.53553 0.403805 6.01041 0.696699 6.3033C0.989592 6.59619 1.46447 6.59619 1.75736 6.3033L6 2.06066L10.2426 6.3033C10.5355 6.59619 11.0104 6.59619 11.3033 6.3033C11.5962 6.01041 11.5962 5.53553 11.3033 5.24264L6.53033 0.469669ZM6.75 21L6.75 1L5.25 1L5.25 21L6.75 21Z" fill="black"/>
+            </svg>
+        </div>
+    </div>
     <div class="overlay__blur"></div>
     <!--Footer-->
     <footer class="footer">

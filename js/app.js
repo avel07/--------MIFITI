@@ -5,7 +5,7 @@ const app = function () {
             // Тут подключаются функции
                 app.Submenu(),
                 app.MobMenu(),
-                // app.FixedHeader(),
+                app.arrowTop(),
                 app.Basket(),
                 app.AddBasket(),
                 app.Personal(),
@@ -15,6 +15,7 @@ const app = function () {
                 app.RegForm(),
                 app.PassForm(),
                 app.SearchForm(),
+                app.OrderForm(),
                 app.ReadMore(),
                 app.addFavorite(),
                 app.Filters(),
@@ -32,32 +33,37 @@ const app = function () {
         BackgroundHide: () => {
             body.classList.remove('popup__show');
         },
-        // FixedHeader: () => {
-        //     header = document.querySelector('header');
-
-        //     window.addEventListener('scroll', app.Throttle(() => {
-        //         window.scrollY > 500 
-
-        //     }, 300))
-        // },
+        arrowTop: () => {
+            window.addEventListener('scroll', app.Throttle(() => {
+                window.scrollY > 500
+                    ? body.classList.add('show__arrow')
+                    : body.classList.remove('show__arrow')
+            }, 300))
+        },
         // Работа с Background при вызове SubMenu
         Submenu: () => {
             let items = Array.from(document.querySelectorAll(".header__submenu")).map(i => i.parentNode);
-            for (i = 0; i < items.length; i++) {
-                items[i].addEventListener('mouseenter', () => {
-                    app.BackgroundShow();
-                })
-                items[i].addEventListener('mouseleave', () => {
-                    app.BackgroundHide();
-                })
+            if(items){
+                for (i = 0; i < items.length; i++) {
+                    items[i].addEventListener('mouseenter', () => {
+                        app.BackgroundShow();
+                    })
+                    items[i].addEventListener('mouseleave', () => {
+                        app.BackgroundHide();
+                    })
+                }
             }
         },
         // Работа с мобильным меню
         MobMenu: () => {
             let item__open = document.querySelector('.header__panel__mobile--navbar');
             let item__close = document.querySelector('.header__menu--mob__close');
+            if(item__open){
                 item__open.addEventListener('click', app.MobMenuOpen);
+            }
+            if(item__close){
                 item__close.addEventListener('click', app.MobMenuClose);
+            }
         },
         // Открываем мобильное меню
         MobMenuOpen: () => {
@@ -73,8 +79,12 @@ const app = function () {
         Basket: () => {
             let item__open = document.querySelector('.header__panel__basket');
             let item__close = document.querySelector('.header__basket--close');
+            if (item__open) {
                 item__open.addEventListener('click', app.BasketOpen);
+            }
+            if (item__close) {
                 item__close.addEventListener('click', app.BasketClose);
+            }
         },
         // Открываем корзину
         BasketOpen: () => {
@@ -90,8 +100,12 @@ const app = function () {
         Personal: () => {
             let item__open = document.querySelector('.header__panel__personal');
             let item__close = document.querySelector('.header__personal--close');
+            if (item__open) {
                 item__open.addEventListener('click', app.PersonalOpen);
+            }
+            if (item__close) {
                 item__close.addEventListener('click', app.PersonalClose);
+            }
         },
         // Открываем пользователя.
         PersonalOpen: () => {
@@ -107,8 +121,12 @@ const app = function () {
         Search: () => {
             let item__open = document.querySelector('.header__panel__search');
             let item__close = document.querySelector('.header__search--close');
+            if (item__open) {
                 item__open.addEventListener('click', app.SearchOpen);
+            }
+            if (item__close) {
                 item__close.addEventListener('click', app.SearchClose);
+            }
         },
         // Открываем поиск
         SearchOpen: () => {
@@ -133,68 +151,89 @@ const app = function () {
         // Клик вне блока.
         ClickOutside: () => {
             let overlay = document.querySelector('.overlay__blur');
-            overlay.addEventListener('click', () => {
-                app.MobMenuClose();
-                app.BasketClose();
-                app.PersonalClose();
-                app.SearchClose();
-            })
+            if(overlay){
+                overlay.addEventListener('click', () => {
+                    app.MobMenuClose();
+                    app.BasketClose();
+                    app.PersonalClose();
+                    app.SearchClose();
+                })
+            }
         },
         // Форма аутентификации
         AuthForm: () => {
             let button = document.querySelector('button[type="submit"].header__personal--auth__submit');
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (app.FormControl(e.target)) {
-                    console.log('Отправляем форму Auth')
-                }
-            })
+            if(button){
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (app.FormControl(e.target)) {
+                        alert('Отправляем форму Auth')
+                    }
+                })
+            }
         },
         // Форма регистрации
         RegForm: () => {
             let button = document.querySelector('button[type="submit"].header__personal--reg__submit');
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (app.FormControl(e.target)) {
-                    console.log('Отправляем форму Reg')
-                }
-            })
+            if(button){
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (app.FormControl(e.target)) {
+                        alert('Отправляем форму Reg')
+                    }
+                })
+            }
         },
         // Форма забыли пароль
         PassForm: () => {
             let button = document.querySelector('button[type="submit"].header__personal--pass__submit');
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (app.FormControl(e.target)) {
-                    console.log('Отправляем форму Pass')
-                }
-            })
+            if(button){
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (app.FormControl(e.target)) {
+                        alert('Отправляем форму Pass')
+                    }
+                })
+            }
         },
         // Форма поиска
         SearchForm: () => {
             let button = document.querySelector('button[type="submit"].header__search__submit');
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (app.FormControl(e.target)) {
-                    console.log('Отправляем форму Search')
-                }
-            })
+            if(button){
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (app.FormControl(e.target)) {
+                        alert('Отправляем форму Search')
+                    }
+                })
+            }
+        },
+        OrderForm: () => {
+            let button = document.querySelector('button[type="submit"]#order__submit');
+            if(button){
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (app.FormControl(e.target)) {
+                        alert('Отправляем заказ!')
+                    }
+                })
+            }
         },
         // Добавить товар в избранное
         addFavorite: () => {
             let buttons = document.querySelectorAll('[data-favorite]');
-            for(i=0;i<buttons.length;i++){
+            for (i = 0; i < buttons.length; i++) {
                 let button = buttons[i];
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
                     let id = button.dataset.favorite
-                    if(!button.classList.contains('active')){
+                    if (!button.classList.contains('active')) {
                         button.classList.add('active');
-                        console.log('Отправляем в фавориты товар с ID - ' + id);
+                        alert('Отправляем в фавориты товар с ID - ' + id);
                     }
-                    else{
+                    else {
                         button.classList.remove('active');
-                        console.log('Убираем из фаворитов товар с ID - ' + id);
+                        alert('Убираем из фаворитов товар с ID - ' + id);
                     }
                 })
             }
@@ -203,17 +242,30 @@ const app = function () {
         FormControl: (item__submit) => {
             let result = [],
                 find__error = false
-            let parents = item__submit.parentNode;
-            for (i = 0; i < parents.length; i++) {
-                if (parents[i].hasAttribute('aria-required')) {
-                    if (parents[i].value === '') {
-                        parents[i].classList.add('error');
+            let children = Array.from(item__submit.parentElement);
+            for (i = 0; i < children.length; i++) {
+                if (children[i].hasAttribute('aria-required')) {
+                    if (children[i].value === '') {
+                        children[i].classList.add('error');
+                        result += false;
+                    }
+                    else if (children[i].type === 'checkbox' && !children[i].checked) {
+                        children[i].classList.add('error');
                         result += false;
                     }
                     else {
-                        parents[i].classList.remove('error');
+                        children[i].classList.remove('error');
                         result += true;
                     }
+                }
+            }
+            for (i = 0; i < children.length; i++) {
+                if(children[i].classList.contains('error')){
+                    children[i].parentElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    return false;
                 }
             }
             find__error = result.match(/false/);
@@ -223,18 +275,17 @@ const app = function () {
             else {
                 find__error = false
             }
-            result = [];
             return find__error;
         },
         // Читать полностью
         ReadMore: () => {
             let item = document.querySelectorAll('[data-readmore]');
-            for(i=0;i<item.length;i++){
+            for (i = 0; i < item.length; i++) {
                 item[i].addEventListener('click', (e) => {
-                    if(e.target.textContent === e.target.dataset.readmore){
+                    if (e.target.textContent === e.target.dataset.readmore) {
                         e.target.textContent = 'Скрыть';
                     }
-                    else if(e.target.classList.contains('collapsed')){
+                    else if (e.target.classList.contains('collapsed')) {
                         e.target.textContent = e.target.dataset.readmore;
                     }
                 })
@@ -245,80 +296,79 @@ const app = function () {
             let items = document.querySelectorAll('.catalog__filter--item__title');
             let open__filter = document.querySelector('.catalog__filter--open');
             let close__filter = document.querySelector('.catalog__filter--mob__close');
-                if (items.length > 0){
-                    for(i=0;i<items.length;i++){
-                        let item = items[i];
-                        let item__body = item.nextElementSibling;
-                        item.addEventListener('click', function(e) {
-                            if(window.innerWidth > 768){
-                                if(item__body.classList.contains('show') && this.classList.contains('show')){
-                                    this.classList.remove('show')
-                                    item__body.classList.remove('show')
-                                    return false
-                                }
-                                for(j=0;j<items.length;j++){
-                                    if(items[j].nextElementSibling.classList.contains('show')){
-                                        items[j].classList.remove('show');
-                                        items[j].nextElementSibling.classList.remove('show')
-                                    }
-                                }
-                                this.classList.add('show')
-                                item__body.classList.add('show');   
+            if (items.length > 0) {
+                for (i = 0; i < items.length; i++) {
+                    let item = items[i];
+                    let item__body = item.nextElementSibling;
+                    item.addEventListener('click', function (e) {
+                        if (window.innerWidth > 768) {
+                            if (item__body.classList.contains('show') && this.classList.contains('show')) {
+                                this.classList.remove('show')
+                                item__body.classList.remove('show')
+                                return false
                             }
-                            else if(window.innerWidth < 768){
-                                    this.classList.toggle('collapsed');
-                                    let collapsed_block = this.nextElementSibling;
-                                    let collapse = new Collapse(collapsed_block);
-                                    collapse.toggle();
-                            }
-                        })
-                        document.addEventListener('click', (e) => {
-                            if(!e.composedPath().includes(document.querySelector('.catalog__filter--items') || !e.composedPath().includes(document.querySelector('.catalog__filter--mob'))))
-                            {
-                                for(i=0;i<items.length;i++){
-                                    if(items[i].classList.contains('show') && items[i].nextElementSibling.classList.contains('show')){
-                                        items[i].nextElementSibling.classList.remove('show');
-                                        items[i].classList.remove('show');
-                                    }
+                            for (j = 0; j < items.length; j++) {
+                                if (items[j].nextElementSibling.classList.contains('show')) {
+                                    items[j].classList.remove('show');
+                                    items[j].nextElementSibling.classList.remove('show')
                                 }
                             }
-                        })
-                    }
-                }
-                    if(open__filter){
-                        open__filter.addEventListener('click', () =>{
-                            body.classList.add('show__filter');
-                            app.LockScreen();
-                        })
-                    }
-                    if(close__filter){
-                        close__filter.addEventListener('click', () => {
-                            for(i=0;i<items.length;i++){
-                                if(items[i].classList.contains('collapsed') && items[i].nextElementSibling.classList.contains('show')){
+                            this.classList.add('show')
+                            item__body.classList.add('show');
+                        }
+                        else if (window.innerWidth < 768) {
+                            this.classList.toggle('collapsed');
+                            let collapsed_block = this.nextElementSibling;
+                            let collapse = new Collapse(collapsed_block);
+                            collapse.toggle();
+                        }
+                    })
+                    document.addEventListener('click', (e) => {
+                        if (!e.composedPath().includes(document.querySelector('.catalog__filter--items') || !e.composedPath().includes(document.querySelector('.catalog__filter--mob')))) {
+                            for (i = 0; i < items.length; i++) {
+                                if (items[i].classList.contains('show') && items[i].nextElementSibling.classList.contains('show')) {
                                     items[i].nextElementSibling.classList.remove('show');
-                                    items[i].classList.remove('collapsed');
+                                    items[i].classList.remove('show');
                                 }
                             }
-                            body.classList.remove('show__filter');
-                            app.UnlockScreen();
-                        })
+                        }
+                    })
+                }
+            }
+            if (open__filter) {
+                open__filter.addEventListener('click', () => {
+                    body.classList.add('show__filter');
+                    app.LockScreen();
+                })
+            }
+            if (close__filter) {
+                close__filter.addEventListener('click', () => {
+                    for (i = 0; i < items.length; i++) {
+                        if (items[i].classList.contains('collapsed') && items[i].nextElementSibling.classList.contains('show')) {
+                            items[i].nextElementSibling.classList.remove('show');
+                            items[i].classList.remove('collapsed');
+                        }
                     }
-            },
+                    body.classList.remove('show__filter');
+                    app.UnlockScreen();
+                })
+            }
+        },
         ChangeSku: () => {
             let items = document.querySelectorAll('.catalog__element--info__sku--property__properties');
-            for(i=0;i<items.length;i++){
+            for (i = 0; i < items.length; i++) {
                 let item = items[i]
                 item.addEventListener('click', (e) => {
-                    if(e.target.classList.contains('catalog__element--info__sku--property__item')){
+                    if (e.target.classList.contains('catalog__element--info__sku--property__item')) {
                         let sku = e.target;
                         let items = sku.parentElement.children;
-                        for(item of items){
-                            if(item.classList.contains('active')){
+                        for (item of items) {
+                            if (item.classList.contains('active')) {
                                 item.classList.remove('active');
                             }
-                                e.target.classList.add('active');
+                            e.target.classList.add('active');
                         }
-                        console.log('Получаем данные об этом ТП - ' + e.target.textContent);
+                        alert('Получаем данные об этом ТП - ' + e.target.textContent);
                     }
                 })
             }
@@ -327,8 +377,8 @@ const app = function () {
             let minus = document.querySelectorAll('.quantity__minus');
             let plus = document.querySelectorAll('.quantity__plus');
             let input = document.querySelectorAll('.quantity__input');
-            if(plus && minus){
-                for(i=0;i<minus.length;i++){
+            if (plus && minus) {
+                for (i = 0; i < minus.length; i++) {
                     minus[i].addEventListener('click', (e) => {
                         let input = e.target.nextElementSibling
                         let count = parseInt(input.value) - 1
@@ -342,23 +392,23 @@ const app = function () {
                         input.value = count
                         input.dispatchEvent(new Event('change'));
                     })
-                    input[i].addEventListener('change', function() {
+                    input[i].addEventListener('change', function () {
                         let id = this.dataset.quantity
                         let basket = document.querySelector(`[data-basket="${id}"]`)
                         basket.dataset.quantity = this.value;
-                        console.log(`Отправили в кнопку корзины товара в количестве ${this.value} шт.`)
+                        alert(`Отправили в кнопку корзины товара в количестве ${this.value} шт.`)
                     })
                 }
             }
         },
         AddBasket: () => {
             let items = document.querySelectorAll('[data-basket]');
-            for(i=0;i<items.length;i++){
+            for (i = 0; i < items.length; i++) {
                 let item = items[i]
                 item.addEventListener('click', () => {
                     let id = item.dataset.basket;
                     let quantity = item.dataset.quantity;
-                    console.log(`Добавляем в корзину товар ID = ${id} с количеством - ${quantity}`)
+                    alert(`Добавляем в корзину товар ID = ${id} с количеством - ${quantity}`)
                 })
             }
         },
@@ -370,56 +420,58 @@ const app = function () {
         },
         // Если есть overflow
         Scrolled: () => {
-        let items = document.querySelectorAll('[data-scrolled]');
-        Element.prototype.isOverflowing = function() {
-            return this.scrollHeight > this.clientHeight || this.scrollWidth > this.clientWidth;
-        }
-        Element.prototype.isScrolled = function() {
-            return this.scrollHeight - this.scrollTop === this.clientHeight
-        }
-        if(items.length > 0){ 
-            // Динамичный ResizeObserver для Корзины
-            let observer = new ResizeObserver(app.Throttle((entries) => {
-                if(entries){
-                for (let entry of entries) {
-                    let position = entry.target.dataset.scrolled;
-                    if(entry.target.scrollHeight > entry.target.clientHeight || entry.target.scrollWidth > entry.target.clientWidth){
-                        entry.target.nextElementSibling.dataset.scroll = position
-                        entry.target.nextElementSibling.setAttribute('data-scroll', position)
-                    }
-                    else{
-                        entry.target.nextElementSibling.dataset.scroll = ''
-                    }
-                }
-            }}, 500));
-            for(i=0;i<items.length;i++){
-                let item = items[i];
-                observer.observe(item);
-                item.addEventListener('scroll', app.Throttle(function(){
-                    let position = item.dataset.scrolled
-                    if (item.isScrolled()) {
-                        item.nextElementSibling.dataset.scroll = ''
-                    }
-                    else{
-                        item.nextElementSibling.dataset.scroll = position
-                    }
-                }, 300))
+            let items = document.querySelectorAll('[data-scrolled]');
+            Element.prototype.isOverflowing = function () {
+                return this.scrollHeight > this.clientHeight || this.scrollWidth > this.clientWidth;
             }
-        }
+            Element.prototype.isScrolled = function () {
+                return this.scrollHeight - this.scrollTop === this.clientHeight
+            }
+            if (items.length > 0) {
+                // Динамичный ResizeObserver для Корзины
+                let observer = new ResizeObserver(app.Throttle((entries) => {
+                    if (entries) {
+                        for (let entry of entries) {
+                            let position = entry.target.dataset.scrolled;
+                            if (entry.target.scrollHeight > entry.target.clientHeight || entry.target.scrollWidth > entry.target.clientWidth) {
+                                entry.target.nextElementSibling.dataset.scroll = position
+                                entry.target.nextElementSibling.setAttribute('data-scroll', position)
+                            }
+                            else {
+                                entry.target.nextElementSibling.dataset.scroll = ''
+                            }
+                        }
+                    }
+                }, 500));
+                for (i = 0; i < items.length; i++) {
+                    let item = items[i];
+                    observer.observe(item);
+                    item.addEventListener('scroll', app.Throttle(function () {
+                        let position = item.dataset.scrolled
+                        if (item.isScrolled()) {
+                            item.nextElementSibling.dataset.scroll = ''
+                        }
+                        else {
+                            item.nextElementSibling.dataset.scroll = position
+                        }
+                    }, 300))
+                }
+            }
         },
+        // стандартный smooth скролл до объекта.
         ScrolltoObject: () => {
             let items = document.querySelectorAll('[data-scroll]');
-            for(i=0;i<items.length;i++){
+            for (i = 0; i < items.length; i++) {
                 let item = items[i];
                 item.addEventListener('click', (e) => {
                     let link = item.dataset.scroll;
-                    if(link === 'this'){
+                    if (link === 'this') {
                         e.target.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
                         });
                     }
-                    else{
+                    else {
                         document.querySelector(link).scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
@@ -429,36 +481,53 @@ const app = function () {
                 })
             }
         },
+        FetchRequest: (url, data) => {
+            let RequestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            }
+            fetch(url, RequestOptions)
+                .then(response => response.json())
+                .then(data => {
+                    return data;
+                })
+                .catch(error => {
+                    return error;
+                })
+        },
         // Игнорирует вызовы передаваемой функции пока не пройдет определенное ожидание
-        Throttle:(func, ms) => {
+        Throttle: (func, ms) => {
             let locked = false
-            return function() {
-              if (locked) return
-              const context = this
-              const args = arguments
-              locked = true
-              setTimeout(() => {
-                func.apply(context, args)
-                locked = false
-              }, ms)
-        
+            return function () {
+                if (locked) return
+                const context = this
+                const args = arguments
+                locked = true
+                setTimeout(() => {
+                    func.apply(context, args)
+                    locked = false
+                }, ms)
+
             }
-          },
-          // Игнорирование вызовов передаваемой функции (resize, scroll, keydown)
-         Debounce: function(func, ms, now) { 
+        },
+        // Игнорирование вызовов передаваемой функции (resize, scroll, keydown)
+        Debounce: function (func, ms, now) {
             let onLast
-            return function() {
-              const context = this
-              const args = arguments 
-              const onFirst = now && !onLast 
-              clearTimeout(onLast)
-              onLast = setTimeout(() => { 
-                onLast = null
-                if (!now) func.apply(context, args) 
-              }, ms)
-              if (onFirst) func.apply(context, args)
+            return function () {
+                const context = this
+                const args = arguments
+                const onFirst = now && !onLast
+                clearTimeout(onLast)
+                onLast = setTimeout(() => {
+                    onLast = null
+                    if (!now) func.apply(context, args)
+                }, ms)
+                if (onFirst) func.apply(context, args)
             }
-         },
+        },
         // Collapse
         Collapse: () => {
             let togglebuttons = document.querySelectorAll('[data-toggle="collapse"]');
@@ -466,13 +535,13 @@ const app = function () {
                 let target = togglebuttons[i];
                 let toggletarget = togglebuttons[i].dataset.target;
                 target.addEventListener('click', (e) => {
-                    if(target.dataset.target === 'next'){
+                    if (target.dataset.target === 'next') {
                         target.classList.toggle('collapsed');
                         let collapsed_block = target.nextElementSibling;
                         let collapse = new Collapse(collapsed_block);
                         collapse.toggle();
                     }
-                    else{
+                    else {
                         target.classList.toggle('collapsed');
                         let collapsed_block = document.querySelector(toggletarget);
                         let collapse = new Collapse(collapsed_block);
@@ -490,28 +559,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // HomeSlider
 const homeSlider = new Swiper('.main__slider .swiper', {
-    speed:600,autoHeight:true,slidesPerView: 1,spaceBetween: 0, slideActiveClass: 'active',
-    navigation: {nextEl: '.main__slider .main__slider--next',prevEl: '.main__slider .main__slider--prev'},
-    autoplay: {delay: 6000}
+    speed: 600, autoHeight: true, slidesPerView: 1, spaceBetween: 0, slideActiveClass: 'active',
+    navigation: { nextEl: '.main__slider .main__slider--next', prevEl: '.main__slider .main__slider--prev' },
+    autoplay: { delay: 6000 }
 });
 
 const homeSection = new Swiper('.catalog__section .swiper', {
-    speed:600,autoHeight:true,slidesPerView: 3,spaceBetween: 7, slideActiveClass: 'active',
-    navigation: {nextEl: '.catalog__section .catalog__section__slider--next',prevEl: '.catalog__section .catalog__section__slider--prev'},
+    speed: 600, autoHeight: true, slidesPerView: 3, spaceBetween: 7, slideActiveClass: 'active',
+    navigation: { nextEl: '.catalog__section .catalog__section__slider--next', prevEl: '.catalog__section .catalog__section__slider--prev', disabledClass: 'disabled' },
     breakpoints: {
         0: {
             slidesPerView: 'auto',
-            spaceBetween: 5,      
+            spaceBetween: 5,
         },
         576: {
             slidesPerView: 2,
             spaceBetween: 5
         },
         992: {
-          slidesPerView: 3,
-          spaceBetween: 7
+            slidesPerView: 3,
+            spaceBetween: 7
         }
-      }
+    }
 });
 
 const catalogElementsThumbs = new Swiper('.catalog__element--gallery__thumbs .swiper', {
@@ -523,7 +592,7 @@ const catalogElementsThumbs = new Swiper('.catalog__element--gallery__thumbs .sw
 });
 
 const catalogElements = new Swiper('.catalog__element--gallery__images .swiper', {
-    slidesPerView : 1,
+    slidesPerView: 1,
     thumbs: {
         swiper: catalogElementsThumbs,
         slideThumbActiveClass: 'active',
@@ -531,7 +600,7 @@ const catalogElements = new Swiper('.catalog__element--gallery__images .swiper',
     pagination: {
         el: '.swiper-pagination',
     }
-}) ;
+});
 
 // var swiper = new Swiper(".mySwiper", {
 //     spaceBetween: 10,

@@ -29,7 +29,7 @@
                 </div>
                 <nav class="header__menu">
                     <ul class="header__menu__items">
-                        <li class="header__menu__item active">
+                        <li class="header__menu__item">
                             <a href="#">Каталог</a>
                             <div class="header__submenu">
                                 <div class="container">
@@ -669,6 +669,12 @@
                                         placeholder="" required>
                                     <span class="form__error">Заполните обязательные поля</span>
                                 </div>
+                                <div class="form__block user__agreement">
+                                    <input class="form__input" type="checkbox" id="reg__agreement" aria-required
+                                    required>
+                                    <label class="form__label" for="reg__agreement">Я разрешаю MI FI TI использовать мои личные данные в соответствии с пользовательским соглашением</label>
+                                    <span class="form__error">Примите пользовательское соглашение</span>
+                                </div>
                                 <button class="btn btn__main--black header__personal--reg__submit" type="submit">
                                     Зарегистироваться
                                 </button>
@@ -993,7 +999,7 @@
                                         <!-- <div class="catalog__item--button catalog__item--addBasket">
                                     <button class="btn btn__main--white">В корзину</button>
                                 </div> -->
-                                        <div class="catalog__item--favorite" data-favorite="1">
+                                        <div class="catalog__item--favorite" data-favorite="2">
                                             <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -1033,7 +1039,7 @@
                                         <!-- <div class="catalog__item--button catalog__item--addBasket">
                                     <button class="btn btn__main--white">В корзину</button>
                                 </div> -->
-                                        <div class="catalog__item--favorite active" data-favorite="1">
+                                        <div class="catalog__item--favorite active" data-favorite="3">
                                             <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -1074,7 +1080,7 @@
                                         <!-- <div class="catalog__item--button catalog__item--addBasket">
                                     <button class="btn btn__main--white">В корзину</button>
                                 </div> -->
-                                        <div class="catalog__item--favorite" data-favorite="1">
+                                        <div class="catalog__item--favorite" data-favorite="4">
                                             <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -1116,7 +1122,7 @@
                                         <!-- <div class="catalog__item--button catalog__item--addBasket">
                                     <button class="btn btn__main--white">В корзину</button>
                                 </div> -->
-                                        <div class="catalog__item--favorite active" data-favorite="1">
+                                        <div class="catalog__item--favorite active" data-favorite="5">
                                             <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -1156,7 +1162,7 @@
                                         <!-- <div class="catalog__item--button catalog__item--addBasket">
                                     <button class="btn btn__main--white">В корзину</button>
                                 </div> -->
-                                        <div class="catalog__item--favorite" data-favorite="1">
+                                        <div class="catalog__item--favorite" data-favorite="6">
                                             <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -1196,7 +1202,7 @@
                                         <!-- <div class="catalog__item--button catalog__item--addBasket">
                                     <button class="btn btn__main--white">В корзину</button>
                                 </div> -->
-                                        <div class="catalog__item--favorite active" data-favorite="1">
+                                        <div class="catalog__item--favorite active" data-favorite="7">
                                             <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -1237,7 +1243,7 @@
                                         <!-- <div class="catalog__item--button catalog__item--addBasket">
                                     <button class="btn btn__main--white">В корзину</button>
                                 </div> -->
-                                        <div class="catalog__item--favorite" data-favorite="1">
+                                        <div class="catalog__item--favorite" data-favorite="8">
                                             <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -1324,7 +1330,13 @@
     </div>
 </div>
     </main>
-
+    <div class="arrow__top" data-scroll="body">
+        <div class="arrow__top--icon">
+            <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.53033 0.469669C6.23744 0.176777 5.76256 0.176777 5.46967 0.469669L0.696698 5.24264C0.403805 5.53553 0.403805 6.01041 0.696699 6.3033C0.989592 6.59619 1.46447 6.59619 1.75736 6.3033L6 2.06066L10.2426 6.3033C10.5355 6.59619 11.0104 6.59619 11.3033 6.3033C11.5962 6.01041 11.5962 5.53553 11.3033 5.24264L6.53033 0.469669ZM6.75 21L6.75 1L5.25 1L5.25 21L6.75 21Z" fill="black"/>
+            </svg>
+        </div>
+    </div>
     <div class="overlay__blur"></div>
     <!--Footer-->
     <footer class="footer">

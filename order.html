@@ -29,7 +29,7 @@
                 </div>
                 <nav class="header__menu">
                     <ul class="header__menu__items">
-                        <li class="header__menu__item active">
+                        <li class="header__menu__item">
                             <a href="#">Каталог</a>
                             <div class="header__submenu">
                                 <div class="container">
@@ -134,20 +134,6 @@
                                 </div>
                             </div>
                             <div class="favorites__quantity"></div>
-                        </div>
-                        <div class="header__panel__item">
-                            <div class="header__panel__basket active">
-                                <div class="basket__icon">
-                                    <svg width="31" height="25" viewBox="0 0 31 25" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.47736 20.5229C6.37954 19.9049 6.04477 17.1973 7.49421 16.0596C7.49237 16.0385 7.49789 16.0081 7.48685 15.998C6.50646 15.1344 6.28481 13.9719 6.1441 12.7497C5.83416 10.0504 5.49756 7.35383 5.12968 4.66097C4.8924 2.91999 3.3234 1.56344 1.56311 1.49447C1.27617 1.48343 0.989223 1.49815 0.702279 1.48435C0.277381 1.46504 0.0152689 1.19833 -0.000365836 0.789982C-0.0150809 0.362325 0.236915 0.075381 0.66917 0.0303161C3.13487 -0.225358 5.42122 1.15142 6.32712 3.46169C6.43104 3.72656 6.59383 3.69069 6.78145 3.69069C14.0121 3.69069 21.2427 3.69069 28.4724 3.69069C28.9773 3.69069 29.4822 3.68609 29.9871 3.69161C30.6364 3.69805 30.9519 4.12387 30.7578 4.7465C29.7646 7.94059 28.775 11.1356 27.7652 14.3242C27.2547 15.9364 25.8871 16.9085 24.1783 16.9094C19.2203 16.9131 14.2622 16.9094 9.30416 16.9113C8.51139 16.9113 8.05062 17.3481 8.07729 18.0664C8.09845 18.6357 8.49943 19.0606 9.06872 19.1093C9.1938 19.1204 9.32072 19.1149 9.44763 19.1149C14.8306 19.1149 20.2126 19.113 25.5956 19.1167C27.0248 19.1167 28.1937 20.0014 28.5276 21.3157C28.935 22.9187 27.9601 24.5309 26.3543 24.9071C24.7421 25.2851 23.1722 24.2835 22.8172 22.6529C22.6811 22.0266 22.7335 21.4233 23.0131 20.842C23.0462 20.774 23.0701 20.7013 23.1106 20.5992H13.5513C14.002 21.4463 14.0553 22.2878 13.7021 23.1413C13.4446 23.7639 13.0317 24.2624 12.4495 24.6063C11.3735 25.2437 9.97278 25.0919 9.0586 24.2559C8.24008 23.5073 7.60365 22.0238 8.47552 20.5229H8.47736ZM29.0895 5.17967H6.71523C6.71523 5.28452 6.70695 5.36453 6.71615 5.44271C7.05092 8.1043 7.38476 10.7659 7.72413 13.4266C7.88416 14.6764 8.76614 15.4462 10.05 15.4471C14.7432 15.4508 19.4364 15.4499 24.1287 15.4471C25.2792 15.4471 26.0582 14.8659 26.4031 13.7659C26.9135 12.1381 27.4203 10.5084 27.9289 8.8796C28.3114 7.65733 28.695 6.43505 29.0886 5.17967H29.0895ZM25.682 20.613C24.8332 20.614 24.2115 21.2265 24.2151 22.0569C24.2188 22.8801 24.8571 23.5064 25.6903 23.5036C26.5291 23.5009 27.1563 22.8773 27.1554 22.0487C27.1536 21.2127 26.5374 20.6121 25.683 20.613H25.682ZM10.9817 20.613C10.13 20.6186 9.52029 21.2265 9.52673 22.0652C9.53316 22.893 10.1714 23.5128 11.0065 23.5036C11.8425 23.4944 12.4743 22.8608 12.4661 22.0404C12.4578 21.2081 11.8324 20.6075 10.9817 20.613Z" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="basket__quantity">
-                                1
-                            </div>
                         </div>
                         <div class="header__panel__item">
                             <div class="header__panel__mobile--navbar">
@@ -669,6 +655,12 @@
                                         placeholder="" required>
                                     <span class="form__error">Заполните обязательные поля</span>
                                 </div>
+                                <div class="form__block user__agreement">
+                                    <input class="form__input" type="checkbox" id="reg__agreement" aria-required
+                                    required>
+                                    <label class="form__label" for="reg__agreement">Я разрешаю MI FI TI использовать мои личные данные в соответствии с пользовательским соглашением</label>
+                                    <span class="form__error">Примите пользовательское соглашение</span>
+                                </div>
                                 <button class="btn btn__main--black header__personal--reg__submit" type="submit">
                                     Зарегистироваться
                                 </button>
@@ -732,7 +724,8 @@
             </div>
         </div>
     </aside>
-    <main class="content__wrap">
+    <main>
+        <div class="content__wrap">
         <!-- Breadcrumbs -->
         <div class="breadcrumbs">
             <div class="container">
@@ -757,31 +750,33 @@
         </div>
         <div class="ordering">
             <div class="container">
+                <div class="ordering__row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                 <form class="ordering__sections">
                 <div class="ordering__section">
                     <div class="ordering__section--title">
                         1. Персональные данные
                     </div>
                     <div class="ordering__section--body">
-                        <div class="form__block">
+                        <div class="form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <label class="form__label" for="personal__name">Имя*</label>
                             <input class="form__input" type="text" id="personal__name"
                                 aria-required required name="personal__name">
                             <span class="form__error">Заполните обязательные поля</span>
                         </div>
-                        <div class="form__block">
+                        <div class="form__block form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <label class="form__label" for="personal__secondName">Фамилия*</label>
                             <input class="form__input" type="text" id="personal__secondName"
                                 aria-required required name="personal__secondName">
                             <span class="form__error">Заполните обязательные поля</span>
                         </div>
-                        <div class="form__block">
+                        <div class="form__block form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <label class="form__label" for="personal__phone">Телефон*</label>
                             <input class="form__input" type="tel" data-mask="phone" id="personal__phone"
                                 aria-required placeholder="+7(___)___-__-__" required name="personal__phone">
                             <span class="form__error">Заполните обязательные поля</span>
                         </div>
-                        <div class="form__block">
+                        <div class="form__block form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <label class="form__label" for="personal__email">Эл. Адрес</label>
                             <input class="form__input" type="email" id="personal__email"
                                 required name="personal__email">
@@ -793,13 +788,13 @@
                         2. Адрес доставки
                     </div>
                     <div class="ordering__section--body">
-                        <div class="form__block">
+                        <div class="form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <label class="form__label" for="personal__address">Адрес*</label>
                             <input class="form__input" type="text" id="personal__address"
                                 aria-required required name="personal__address">
                             <span class="form__error">Заполните обязательные поля</span>
                         </div>
-                        <div class="form__block">
+                        <div class="form__block col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <label class="form__label" for="personal__index">Индекс*</label>
                             <input class="form__input" type="text" id="personal__index"
                                 aria-required required name="personal__index">
@@ -812,27 +807,21 @@
                         3. Способ доставки
                     </div>
                     <div class="ordering__section--body">
-                        <div class="form__block">
+                        <div class="form__block form__group--radio col-xs-12">
+                            <input class="form__input" type="radio" checked id="personal__delivery--post" name="delivery__method" value="Почта России" required>
                             <label class="form__label" for="personal__delivery--post">Почта России</label>
-                            <input class="form__input" type="radio" id="personal__delivery--post" name="delivery__method"
-                                aria-required required>
-                            <span class="form__error">Заполните обязательные поля</span>
-                        </div>
-                        <div class="form__block">
+                            <input class="form__input" type="radio" id="personal__delivery--sdek" name="delivery__method" value="СДЭК" required>
                             <label class="form__label" for="personal__delivery--sdek">СДЭК</label>
-                            <input class="form__input" type="radio" id="personal__delivery--sdek" name="delivery__method"
-                                aria-required required>
-                            <span class="form__error">Заполните обязательные поля</span>
+                            <span class="form__error">Выберите способ доставки!</span>
                         </div>
-                        <div class="form__block">
+                        <div class="form__block col-xs-12">
                             <label class="form__label" for="personal__delivery--punkt">Адрес пункта выдачи</label>
-                            <select name="cars" id="personal__delivery--punkt">
+                            <select class="form__select" name="personal__delivery--punkt" id="personal__delivery--punkt">
                                 <option value="one">Пункт один</option>
                                 <option value="two">Пункт два</option>
                                 <option value="three">Пункт три</option>
                                 <option value="four">Пункт четыре</option>
                               </select>
-                            <span class="form__error">Заполните обязательные поля</span>
                         </div>
                     </div>
                 </div>
@@ -841,28 +830,196 @@
                         4. Способ оплаты
                     </div>
                     <div class="ordering__section--body">
-                        <div class="form__block">
+                        <div class="form__block form__group--radio col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <input class="form__input" checked type="radio" id="personal__payment--card" name="personal__payment" value="Картой на сайте" required>
                             <label class="form__label" for="personal__payment--card">Картой на сайте</label>
-                            <input class="form__input" type="radio" id="personal__payment--card" name="personal__payment"
-                                aria-required required>
-                            <span class="form__error">Заполните обязательные поля</span>
-                        </div>
-                        <div class="form__block">
+                            <input class="form__input" type="radio" id="personal__payment--receipt" name="personal__payment" value="При получении" required>
                             <label class="form__label" for="personal__payment--receipt">При получении</label>
-                            <input class="form__input" type="radio" id="personal__payment--receipt" name="personal__payment"
-                                aria-required required>
-                            <span class="form__error">Заполните обязательные поля</span>
+                            <span class="form__error">Выберите способ оплаты</span>
                         </div>
                     </div>
                 </div>
-                <button type="submit">Оформить заказ</button>
+                        <div class="form__block user__agreement">
+                            <input class="form__input" type="checkbox" id="order__agreement" aria-required required>
+                            <label class="form__label" for="order__agreement">Я разрешаю MI FI TI использовать мои личные данные в соответствии с пользовательским соглашением</label>
+                            <span class="form__error">Примите пользовательское соглашение</span>
+                        </div>
+                <button type="submit" id="order__submit" class="btn btn__main--black btn__main--black__bg order__submit">Оформить заказ</button>
             </form>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 position__sticky">
             <div class="ordering__basket">
-
-            </div>
+                <div class="ordering__basket--title">
+                    Список покупок
+                </div>
+                <div class="ordering__basket--items">
+                    <div class="ordering__basket--item">
+                        <div class="ordering__basket--item__image">
+                            <img src="/img/ФотоКорзины_1.png" alt="">
+                        </div>
+                        <div class="ordering__basket--item__body">
+                            <div class="ordering__basket--item__body--title">
+                                <div class="ordering__basket--item__body--name">
+                                    <a href="#">
+                                        <span>Платье комбинация миди на бретельках</span>
+                                    </a>
+                                </div>
+                                <div class="ordering__basket--item__body--delete">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.00007 10.9997L10.9998 1" stroke="#1D1D1D" stroke-linecap="round"></path>
+                                        <path d="M1.00007 1.00031L10.9998 11" stroke="#1D1D1D" stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ordering__basket--item__body--properties">
+                                <div class="ordering__basket--item__body--property">
+                                    <div class="ordering__basket--item__body--property__name">Цвет:</div>
+                                    <div class="ordering__basket--item__body--property__value">Изумрудный</div>
+                                </div>
+                                <div class="ordering__basket--item__body--property">
+                                    <div class="ordering__basket--item__body--property__name">Размер:</div>
+                                    <div class="ordering__basket--item__body--property__value">XS</div>
+                                </div>
+                                <div class="ordering__basket--item__body--property">
+                                    <div class="ordering__basket--item__body--property__name">Количество:</div>
+                                    <div class="ordering__basket--item__body--property__value">1</div>
+                                </div>
+                            </div>
+                            <div class="ordering__basket--item__body--prices">
+                                <div class="ordering__basket--item__body--price price__old">
+                                    4 000 р.
+                                </div>
+                                <div class="ordering__basket--item__body--price price__discount">
+                                    3 300 р.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ordering__basket--item">
+                        <div class="ordering__basket--item__image">
+                            <img src="/img/ФотоКорзины_1.png" alt="">
+                        </div>
+                        <div class="ordering__basket--item__body">
+                            <div class="ordering__basket--item__body--title">
+                                <div class="ordering__basket--item__body--name">
+                                    <a href="#">
+                                        <span>Платье комбинация миди на бретельках</span>
+                                    </a>
+                                </div>
+                                <div class="ordering__basket--item__body--delete">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.00007 10.9997L10.9998 1" stroke="#1D1D1D" stroke-linecap="round"></path>
+                                        <path d="M1.00007 1.00031L10.9998 11" stroke="#1D1D1D" stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ordering__basket--item__body--properties">
+                                <div class="ordering__basket--item__body--property">
+                                    <div class="ordering__basket--item__body--property__name">Цвет:</div>
+                                    <div class="ordering__basket--item__body--property__value">Изумрудный</div>
+                                </div>
+                                <div class="ordering__basket--item__body--property">
+                                    <div class="ordering__basket--item__body--property__name">Размер:</div>
+                                    <div class="ordering__basket--item__body--property__value">XS</div>
+                                </div>
+                                <div class="ordering__basket--item__body--property">
+                                    <div class="ordering__basket--item__body--property__name">Количество:</div>
+                                    <div class="ordering__basket--item__body--property__value">1</div>
+                                </div>
+                            </div>
+                            <div class="ordering__basket--item__body--prices">
+                                <div class="ordering__basket--item__body--price price__old">
+                                    4 000 р.
+                                </div>
+                                <div class="ordering__basket--item__body--price price__discount">
+                                    3 300 р.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ordering__basket--item">
+                        <div class="ordering__basket--item__image">
+                            <img src="/img/ФотоКорзины_1.png" alt="">
+                        </div>
+                        <div class="ordering__basket--item__body">
+                            <div class="ordering__basket--item__body--title">
+                                <div class="ordering__basket--item__body--name">
+                                    <a href="#">
+                                        <span>Платье комбинация миди на бретельках</span>
+                                    </a>
+                                </div>
+                                <div class="ordering__basket--item__body--delete">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.00007 10.9997L10.9998 1" stroke="#1D1D1D" stroke-linecap="round"></path>
+                                        <path d="M1.00007 1.00031L10.9998 11" stroke="#1D1D1D" stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ordering__basket--item__body--properties">
+                                <div class="ordering__basket--item__body--property">
+                                    <div class="ordering__basket--item__body--property__name">Цвет:</div>
+                                    <div class="ordering__basket--item__body--property__value">Изумрудный</div>
+                                </div>
+                                <div class="ordering__basket--item__body--property">
+                                    <div class="ordering__basket--item__body--property__name">Размер:</div>
+                                    <div class="ordering__basket--item__body--property__value">XS</div>
+                                </div>
+                                <div class="ordering__basket--item__body--property">
+                                    <div class="ordering__basket--item__body--property__name">Количество:</div>
+                                    <div class="ordering__basket--item__body--property__value">1</div>
+                                </div>
+                            </div>
+                            <div class="ordering__basket--item__body--prices">
+                                <div class="ordering__basket--item__body--price price__old">
+                                    4 000 р.
+                                </div>
+                                <div class="ordering__basket--item__body--price price__discount">
+                                    3 300 р.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ordering__basket--prices">
+                    <div class="ordering__basket--price">
+                        <div class="ordering__basket--price__title">
+                            Товары:
+                        </div>
+                        <div class="ordering__basket--price__value">
+                            7 300 р.
+                        </div>
+                    </div>
+                    <div class="ordering__basket--price">
+                        <div class="ordering__basket--price__title">
+                            Доставка:
+                        </div>
+                        <div class="ordering__basket--price__value">
+                            300 р.
+                        </div>
+                    </div>
+                    <div class="ordering__basket--price">
+                        <div class="ordering__basket--price__title ordering__basket--price__full--title">
+                            Итого к оплате:
+                        </div>
+                        <div class="ordering__basket--price__value ordering__basket--price__full--value">
+                            7 600 р.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        </div>
+            </div>
+        </div>
+    </div>
     </main>
+    <div class="arrow__top" data-scroll="body">
+        <div class="arrow__top--icon">
+            <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.53033 0.469669C6.23744 0.176777 5.76256 0.176777 5.46967 0.469669L0.696698 5.24264C0.403805 5.53553 0.403805 6.01041 0.696699 6.3033C0.989592 6.59619 1.46447 6.59619 1.75736 6.3033L6 2.06066L10.2426 6.3033C10.5355 6.59619 11.0104 6.59619 11.3033 6.3033C11.5962 6.01041 11.5962 5.53553 11.3033 5.24264L6.53033 0.469669ZM6.75 21L6.75 1L5.25 1L5.25 21L6.75 21Z" fill="black"/>
+            </svg>
+        </div>
+    </div>
     <div class="overlay__blur"></div>
     <!--Footer-->
     <footer class="footer">

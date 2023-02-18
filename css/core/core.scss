@@ -1674,6 +1674,7 @@ a{
         }
 
         &--image {
+            @include color(background-color, gray);
             img {
                 width: 100%;
                 object-fit: cover;
@@ -1881,8 +1882,6 @@ a{
                 @include media('max', 'lg') {
                     display: none;
                 }
-                &--wrapper{
-                }
                 .swiper-vertical .swiper-wrapper {
                     max-height: 791px;
 
@@ -1920,8 +1919,11 @@ a{
                     }
                 }
             }
-
+            &__image{
+                @include color(background-color, gray);
+            }
             &__thumb {
+                @include color(background-color, gray);
                 img {
                     width: 100%;
                     object-fit: cover;
@@ -2713,6 +2715,7 @@ a{
             justify-content: space-around;
             margin: 0 0 1.125rem;
             &__image{
+                @include color(background-color, gray);
                 width: 20%;
                 @include media('max', 'sm'){
                     width: 30%;
@@ -2876,15 +2879,21 @@ a{
         @include font(300, rem(18), rem(27));
     }
 }
-.payment__info{
-    p{
-        @include color(color, black);
-        @include font(300, rem(18), rem(27));
-        @include media('max', 'sm'){
-            @include font(300, rem(14), rem(22))
+.payment{
+    &__info{
+        p{
+            @include color(color, black);
+            @include font(300, rem(18), rem(27));
+            @include media('max', 'sm'){
+                @include font(300, rem(14), rem(22))
+            }
         }
     }
+    &__image{
+        @include color(background-color, gray);
+    }
 }
+
 .shops{
     &__title{
         @include color(color, black);

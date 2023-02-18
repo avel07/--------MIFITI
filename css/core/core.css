@@ -2516,6 +2516,9 @@ a:hover {
 .catalog__section--items {
   margin: 0 0 1.8125rem;
 }
+.catalog__section--image {
+  background-color: var(--color-gray);
+}
 .catalog__section--image img {
   width: 100%;
   -o-object-fit: cover;
@@ -2756,6 +2759,12 @@ a:hover {
     background-color: var(--color-menu-brown);
     margin: 0 0.5rem 0 0;
   }
+}
+.catalog__element--gallery__image {
+  background-color: var(--color-gray);
+}
+.catalog__element--gallery__thumb {
+  background-color: var(--color-gray);
 }
 .catalog__element--gallery__thumb img {
   width: 100%;
@@ -3500,6 +3509,7 @@ a:hover {
   margin: 0 0 1.125rem;
 }
 .ordering__basket--item__image {
+  background-color: var(--color-gray);
   width: 20%;
 }
 @media only screen and (max-width: 576px) {
@@ -3704,6 +3714,9 @@ a:hover {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
+}
+.payment__image {
+  background-color: var(--color-gray);
 }
 
 .shops__title {

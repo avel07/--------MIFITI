@@ -255,6 +255,74 @@ a {
   text-decoration: inherit;
 }
 
+h6, h5, h4, h3, h2, h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-main-black, inherit);
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+}
+@media only screen and (max-width: 576px) {
+  p {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
 :root {
   --color-black:#000;
   --color-white:#fff;
@@ -949,6 +1017,10 @@ body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .header {
@@ -2085,6 +2157,36 @@ body {
   background-color: var(--color-black);
   color: var(--color-white);
 }
+.btn.hover__effect--black {
+  color: black;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.btn.hover__effect--black:hover {
+  color: white !important;
+  background-color: transparent;
+  text-shadow: nthree;
+}
+.btn.hover__effect--black:hover::before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+.btn.hover__effect--black::before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: "";
+  color: var(--color-main-black);
+  background-color: var(--color-main-black);
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
 
 .slider--arrow {
   position: absolute;
@@ -2220,25 +2322,25 @@ body {
 
 .page__title {
   margin: 2rem 0;
+}
+@media only screen and (max-width: 576px) {
+  .page__title {
+    margin: 1rem 0;
+  }
+}
+.page__title h1 {
   color: var(--color-main-black);
   font-weight: 400;
   font-size: 1.75rem;
   line-height: 2rem;
 }
 @media only screen and (max-width: 576px) {
-  .page__title {
+  .page__title h1 {
     font-weight: 400;
     font-size: 1.25rem;
     line-height: 1.4375rem;
     margin: 0.9375rem 0;
   }
-}
-
-p {
-  font-weight: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
 }
 
 a {
@@ -2253,30 +2355,34 @@ a:hover {
 }
 
 .section__title {
-  text-align: center;
   margin: 0 0 0.75rem;
+}
+.section__title h2 {
+  text-align: center;
   color: var(--color-main-black);
   font-weight: 400;
   font-size: 2.1875rem;
   line-height: 2.5625rem;
 }
 @media only screen and (max-width: 576px) {
-  .section__title {
+  .section__title h2 {
     font-weight: 400;
     font-size: 1.5625rem;
     line-height: 1.8125rem;
   }
 }
 .section__subtitle {
+  margin: 0 0 1.4375rem;
+}
+.section__subtitle p {
   text-align: center;
   color: var(--color-breadcrumbs-gray);
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.1875rem;
-  margin: 0 0 1.4375rem;
 }
 @media only screen and (max-width: 576px) {
-  .section__subtitle {
+  .section__subtitle p {
     font-weight: 400;
     font-size: 0.8125rem;
     line-height: 0.9375rem;
@@ -2285,6 +2391,7 @@ a:hover {
 .section__link {
   display: flex;
   justify-content: center;
+  margin: 1.875rem 0 0;
 }
 
 .arrow__top {
@@ -2313,15 +2420,18 @@ a:hover {
   margin: 3.75rem 0 0 0;
 }
 .about__us--body {
+  max-width: 71.875rem;
+}
+.about__us--body__p p {
   color: var(--color-dull-gray);
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
+  margin: 0;
   text-align: center;
-  max-width: 71.875rem;
 }
 @media only screen and (max-width: 576px) {
-  .about__us--body {
+  .about__us--body__p p {
     font-weight: 400;
     font-size: 0.8125rem;
     line-height: 1.25rem;
@@ -2613,14 +2723,14 @@ a:hover {
   flex-direction: column;
   align-items: center;
 }
-.catalog__description--title {
+.catalog__description--title h2 {
   color: var(--color-breadcrumbs-gray);
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.3125rem;
 }
 @media only screen and (max-width: 576px) {
-  .catalog__description--title {
+  .catalog__description--title h2 {
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.125rem;
@@ -2628,15 +2738,17 @@ a:hover {
 }
 .catalog__description--subtitle {
   margin: 0.9375rem 0 0;
+  max-width: 43.75rem;
+  text-align: center;
+}
+.catalog__description--subtitle p {
   color: var(--color-white-gray);
   font-weight: 300;
   font-size: 0.8125rem;
   line-height: 0.9375rem;
-  max-width: 43.75rem;
-  text-align: center;
 }
 @media only screen and (max-width: 576px) {
-  .catalog__description--subtitle {
+  .catalog__description--subtitle p {
     font-weight: 300;
     font-size: 0.6875rem;
     line-height: 0.8125rem;
@@ -2804,15 +2916,17 @@ a:hover {
   align-items: center;
 }
 .catalog__element--info__title {
+  margin: 0.3125rem 0 0;
+}
+.catalog__element--info__title h1 {
   color: var(--color-main-black);
   font-weight: 400;
   font-size: 1.875rem;
   line-height: 2.1875rem;
-  margin: 0.3125rem 0 0;
   text-align: center;
 }
 @media only screen and (max-width: 576px) {
-  .catalog__element--info__title {
+  .catalog__element--info__title h1 {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.1875rem;
@@ -2948,7 +3062,6 @@ a:hover {
   display: block;
   border: 1px solid var(--color-main-black);
   min-width: 15.625rem;
-  transition: all 0.15s linear;
 }
 @media only screen and (max-width: 1200px) {
   .catalog__element--info__basket--add .basket__item--add {
@@ -2959,11 +3072,6 @@ a:hover {
   .catalog__element--info__basket--add .basket__item--add {
     min-width: 100%;
   }
-}
-.catalog__element--info__basket--add .basket__item--add:hover {
-  background-color: var(--color-menu-brown);
-  color: var(--color-white);
-  border: 1px solid var(--color-menu-brown);
 }
 .catalog__element--info__basket--favorite {
   margin: 0 0 0 1.25rem;
@@ -3080,7 +3188,8 @@ a:hover {
   .catalog__filter--items {
     flex-direction: column;
     overflow: auto;
-    min-height: 60vh;
+    min-height: 50vh;
+    max-height: 55vh;
     flex-wrap: nowrap;
     margin: 1.25rem 0 0;
   }
@@ -3444,7 +3553,7 @@ a:hover {
 }
 @media only screen and (max-width: 576px) {
   .ordering__section:not(:first-child) {
-    margin: 1.875rem 0 0;
+    margin: 3.75rem 0 0;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -3681,6 +3790,19 @@ a:hover {
     margin: 1.25rem auto;
   }
 }
+.return__section--title {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
+  color: var(--color-main-black);
+}
+@media only screen and (max-width: 576px) {
+  .return__section--title {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+}
 .return__section--body {
   display: flex;
   flex-wrap: wrap;
@@ -3695,10 +3817,7 @@ a:hover {
   }
 }
 .return__info {
-  color: var(--color-main-black);
-  font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1.6875rem;
+  margin: 1.25rem 0 0;
 }
 
 .payment__info p {
@@ -3718,29 +3837,31 @@ a:hover {
   background-color: var(--color-gray);
 }
 
-.shops__title {
+.shops__title p {
   color: var(--color-black);
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
 @media only screen and (max-width: 576px) {
-  .shops__title {
+  .shops__title p {
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 .shops__subtitle {
+  margin: 0.9375rem 0;
+}
+.shops__subtitle p {
   color: var(--color-black);
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.6875rem;
-  margin: 0.9375rem 0;
 }
 @media only screen and (max-width: 576px) {
-  .shops__subtitle {
-    font-weight: 500;
+  .shops__subtitle p {
+    font-weight: 300;
     font-size: 0.75rem;
     line-height: 1.25rem;
   }
@@ -3757,27 +3878,31 @@ a:hover {
   align-items: center;
 }
 .main__delivery--title {
+  margin: 1.25rem 0 0;
+}
+.main__delivery--title h2 {
   text-align: center;
   color: var(--color-white);
   font-weight: 400;
   font-size: 2.625rem;
   line-height: 3.25rem;
-  margin: 1.25rem 0 0;
 }
 @media only screen and (max-width: 576px) {
-  .main__delivery--title {
+  .main__delivery--title h2 {
     font-weight: 400;
     font-size: 2.1875rem;
     line-height: 2.5625rem;
   }
 }
 .main__delivery--subtitle {
+  margin: 0.5625rem 0 1.9375rem;
+}
+.main__delivery--subtitle p {
   text-align: center;
   color: var(--color-white);
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.1875rem;
-  margin: 0.5625rem 0 1.9375rem;
 }
 
 .content__wrap {
@@ -3790,7 +3915,12 @@ a:hover {
 .footer__body {
   border-top: 1px solid var(--color-breadcrumbs-gray);
   border-bottom: 1px solid var(--color-breadcrumbs-gray);
-  padding: 1.5rem 0;
+  padding: 2rem 0;
+}
+@media only screen and (max-width: 992px) {
+  .footer__body {
+    padding: 2rem 0 0;
+  }
 }
 .footer__menu--items {
   justify-content: space-between;
@@ -3891,6 +4021,13 @@ a:hover {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   transition: color 0.15s linear;
+}
+@media only screen and (max-width: 576px) {
+  .footer__menu--item__link a {
+    font-weight: 400;
+    font-size: 0.6875rem;
+    line-height: 1.5625rem;
+  }
 }
 .footer__menu--item__link a:hover {
   color: var(--color-brown);

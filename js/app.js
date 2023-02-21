@@ -577,7 +577,7 @@ const homeSlider = new Swiper('.main__slider .swiper', {
 });
 
 const homeSection = new Swiper('.catalog__section .swiper', {
-    speed: 600, autoHeight: true, slidesPerView: 3, spaceBetween: 7, slideActiveClass: 'active',
+    speed: 600, autoHeight: true, slidesPerView: 3, spaceBetween: 7, slideActiveClass: 'active',freeMode: true,
     navigation: { nextEl: '.catalog__section .catalog__section__slider--next', prevEl: '.catalog__section .catalog__section__slider--prev', disabledClass: 'disabled' },
     breakpoints: {
         0: {
@@ -586,7 +586,7 @@ const homeSection = new Swiper('.catalog__section .swiper', {
         },
         576: {
             slidesPerView: 2,
-            spaceBetween: 5
+            spaceBetween: 5,
         },
         992: {
             slidesPerView: 3,

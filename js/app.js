@@ -566,6 +566,7 @@ const app = function () {
 }();
 
 document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
     app.init();
 })
 

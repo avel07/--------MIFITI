@@ -1157,7 +1157,7 @@ main{
     &::before {
         content: '';
         transition: all .5s ease;
-        background: linear-gradient(360deg, #FFFFFF 36.11%, rgba(255, 255, 255, 0) 125%);
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 15%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.8) 45%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.4) 75%, rgba(255,255,255,0.1) 90%, rgba(255,255,255,0) 100%);
         display: block;
         position: absolute;
         bottom: 100%;
@@ -1173,9 +1173,9 @@ main{
     &::before {
         content: '';
         transition: all .5s ease;
-        background: linear-gradient(360deg, #FFFFFF 36.11%, rgba(255, 255, 255, 0) 125%);
         display: block;
         position: absolute;
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 15%, rgba(255,255,255,0.85) 30%, rgba(255,255,255,0.8) 45%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.4) 75%, rgba(255,255,255,0.1) 90%, rgba(255,255,255,0) 100%);
         bottom: 100%;
         left: 0;
         height: 15vh;
@@ -1238,6 +1238,7 @@ main{
         display: block;
         position: relative;
         transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+        border: 1px solid var(--color-black);
         &:hover{
             color: white !important;
             background-color: transparent;

@@ -379,444 +379,444 @@ p {
   .col-xs-1 {
     flex: 0 0 auto;
     width: 8.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-2 {
     flex: 0 0 auto;
     width: 16.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-3 {
     flex: 0 0 auto;
     width: 25%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-4 {
     flex: 0 0 auto;
     width: 33.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-5 {
     flex: 0 0 auto;
     width: 41.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-6 {
     flex: 0 0 auto;
     width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-7 {
     flex: 0 0 auto;
     width: 58.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-8 {
     flex: 0 0 auto;
     width: 66.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-9 {
     flex: 0 0 auto;
     width: 75%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-10 {
     flex: 0 0 auto;
     width: 83.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-11 {
     flex: 0 0 auto;
     width: 91.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xs-12 {
     flex: 0 0 auto;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
 }
 @media (min-width: 576px) {
   .col-sm-1 {
     flex: 0 0 auto;
     width: 8.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-2 {
     flex: 0 0 auto;
     width: 16.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-3 {
     flex: 0 0 auto;
     width: 25%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-4 {
     flex: 0 0 auto;
     width: 33.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-5 {
     flex: 0 0 auto;
     width: 41.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-6 {
     flex: 0 0 auto;
     width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-7 {
     flex: 0 0 auto;
     width: 58.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-8 {
     flex: 0 0 auto;
     width: 66.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-9 {
     flex: 0 0 auto;
     width: 75%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-10 {
     flex: 0 0 auto;
     width: 83.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-11 {
     flex: 0 0 auto;
     width: 91.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-sm-12 {
     flex: 0 0 auto;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
 }
 @media (min-width: 768px) {
   .col-md-1 {
     flex: 0 0 auto;
     width: 8.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-2 {
     flex: 0 0 auto;
     width: 16.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-3 {
     flex: 0 0 auto;
     width: 25%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-4 {
     flex: 0 0 auto;
     width: 33.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-5 {
     flex: 0 0 auto;
     width: 41.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-6 {
     flex: 0 0 auto;
     width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-7 {
     flex: 0 0 auto;
     width: 58.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-8 {
     flex: 0 0 auto;
     width: 66.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-9 {
     flex: 0 0 auto;
     width: 75%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-10 {
     flex: 0 0 auto;
     width: 83.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-11 {
     flex: 0 0 auto;
     width: 91.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-md-12 {
     flex: 0 0 auto;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
 }
 @media (min-width: 992px) {
   .col-lg-1 {
     flex: 0 0 auto;
     width: 8.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-2 {
     flex: 0 0 auto;
     width: 16.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-3 {
     flex: 0 0 auto;
     width: 25%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-4 {
     flex: 0 0 auto;
     width: 33.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-5 {
     flex: 0 0 auto;
     width: 41.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-6 {
     flex: 0 0 auto;
     width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-7 {
     flex: 0 0 auto;
     width: 58.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-8 {
     flex: 0 0 auto;
     width: 66.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-9 {
     flex: 0 0 auto;
     width: 75%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-10 {
     flex: 0 0 auto;
     width: 83.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-11 {
     flex: 0 0 auto;
     width: 91.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-lg-12 {
     flex: 0 0 auto;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
 }
 @media (min-width: 1200px) {
   .col-xl-1 {
     flex: 0 0 auto;
     width: 8.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-2 {
     flex: 0 0 auto;
     width: 16.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-3 {
     flex: 0 0 auto;
     width: 25%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-4 {
     flex: 0 0 auto;
     width: 33.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-5 {
     flex: 0 0 auto;
     width: 41.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-6 {
     flex: 0 0 auto;
     width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-7 {
     flex: 0 0 auto;
     width: 58.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-8 {
     flex: 0 0 auto;
     width: 66.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-9 {
     flex: 0 0 auto;
     width: 75%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-10 {
     flex: 0 0 auto;
     width: 83.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-11 {
     flex: 0 0 auto;
     width: 91.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xl-12 {
     flex: 0 0 auto;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
 }
 @media (min-width: 1400px) {
   .col-xxl-1 {
     flex: 0 0 auto;
     width: 8.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-2 {
     flex: 0 0 auto;
     width: 16.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-3 {
     flex: 0 0 auto;
     width: 25%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-4 {
     flex: 0 0 auto;
     width: 33.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-5 {
     flex: 0 0 auto;
     width: 41.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-6 {
     flex: 0 0 auto;
     width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-7 {
     flex: 0 0 auto;
     width: 58.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-8 {
     flex: 0 0 auto;
     width: 66.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-9 {
     flex: 0 0 auto;
     width: 75%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-10 {
     flex: 0 0 auto;
     width: 83.3333333333%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-11 {
     flex: 0 0 auto;
     width: 91.6666666667%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
   .col-xxl-12 {
     flex: 0 0 auto;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
   }
 }
 .col {
@@ -853,8 +853,8 @@ p {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: calc(1.5rem - 15px);
-  padding-left: calc(1.5rem - 15px);
+  padding-right: calc(1.5rem - 3.5px);
+  padding-left: calc(1.5rem - 3.5px);
 }
 @media (min-width: 576px) {
   .container {
@@ -942,8 +942,8 @@ p {
 }
 .row > * {
   flex-shrink: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 3.5px;
+  padding-right: 3.5px;
   max-width: 100%;
 }
 
@@ -2091,7 +2091,7 @@ main {
 [data-scroll]::before {
   content: "";
   transition: all 0.5s ease;
-  background: linear-gradient(360deg, #FFFFFF 36.11%, rgba(255, 255, 255, 0) 125%);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.95) 15%, rgba(255, 255, 255, 0.85) 30%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.1) 90%, rgba(255, 255, 255, 0) 100%);
   display: block;
   position: absolute;
   bottom: 100%;
@@ -2105,9 +2105,9 @@ main {
 [data-scroll=up]::before {
   content: "";
   transition: all 0.5s ease;
-  background: linear-gradient(360deg, #FFFFFF 36.11%, rgba(255, 255, 255, 0) 125%);
   display: block;
   position: absolute;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.95) 15%, rgba(255, 255, 255, 0.85) 30%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.1) 90%, rgba(255, 255, 255, 0) 100%);
   bottom: 100%;
   left: 0;
   height: 15vh;
@@ -2163,6 +2163,7 @@ main {
   display: block;
   position: relative;
   transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  border: 1px solid var(--color-black);
 }
 .btn.hover__effect--black:hover {
   color: white !important;

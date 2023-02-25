@@ -4215,6 +4215,9 @@ a:hover {
 .pager__items {
   justify-content: center;
 }
+.pager__item {
+  padding: 0 15px;
+}
 .pager__item a {
   transition: color 0.15s linear;
 }
